@@ -16,6 +16,7 @@ Sitio estático (HTML, CSS y JavaScript sin dependencias). No necesita build: Ve
 
 ## Cambios rápidos
 
+- **Fotos de los 7 recomendados**: guardar como `img/platillos/platillo-1.webp` a `platillo-7.webp` (más su `.jpg`, cuadradas de 640x640) y en `js/datos.js` cambiar `foto` a `"platillo-N"` y `referencia` a `false`. Con eso desaparece la etiqueta "foto de referencia".
 - **Logo**: reemplazar `img/logo.png` y `img/logo.webp` (512x512, fondo transparente).
 - **Foto de Fer en la tarjeta**: agregar `img/fer.jpg` y cambiar el `src` marcado en `tarjeta/index.html`.
 - **Precio sin gluten**: `sinGluten` en `js/datos.js` (y el `+$30` del menú en `index.html` se actualiza solo).
