@@ -71,7 +71,8 @@ compartir?.addEventListener("click", async () => {
 if (!quieto) {
   gsap.timeline({ defaults: { ease: "expo.out" } })
     .from(".t-kicker > *", { y: 14, opacity: 0, duration: 1, stagger: 0.08 }, 0)
-    .from(".t-logo", { scale: 0.3, rotation: -200, opacity: 0, duration: 1.6 }, 0.1)
+    .from(".t-foto", { scale: 0.4, opacity: 0, duration: 1.5 }, 0.1)
+    .from(".t-logo", { scale: 0, rotation: -180, duration: 1.2, ease: "back.out(1.8)" }, 0.6)
     .fromTo(".t-sello-texto", { clipPath: "circle(0% at 50% 50%)" }, { clipPath: "circle(75% at 50% 50%)", duration: 1.8, ease: "power2.inOut" }, 0.4)
     .from(".t-sello-aro", { scale: 0.6, opacity: 0, duration: 1.4 }, 0.3)
     .from(".t-linea > *", { yPercent: 110, rotation: 4, duration: 1.3, stagger: 0.1 }, 0.35)

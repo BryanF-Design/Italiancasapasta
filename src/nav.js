@@ -75,7 +75,7 @@ export const iniciarNav = ({ lenis, quieto }) => {
   addEventListener("keydown", (e) => { if (e.key === "Escape" && menuAbierto) { cerrarMenu(); abrir.focus(); } });
 
   const fotoMenu = $("#menu-foto");
-  const fotos = { cocina: "/img/cocina-600.webp", pedidos: "/img/pedidos-600.webp" };
+  const fotos = { cocina: "/img/cocina-600.webp", pedidos: "/img/pedidos-600.webp", fer: "/img/fernando/fernando-2-640.webp" };
   $$(".menu-links a").forEach((a) => a.addEventListener("mouseenter", () => {
     const f = a.dataset.foto;
     const src = fotos[f] ?? `/img/platos-cut/${f}.webp`;

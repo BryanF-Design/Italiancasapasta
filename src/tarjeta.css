@@ -1,5 +1,5 @@
-@import "@fontsource-variable/bodoni-moda/opsz.css";
-@import "@fontsource-variable/bodoni-moda/opsz-italic.css";
+@import "@fontsource-variable/bodoni-moda/wght.css";
+@import "@fontsource-variable/bodoni-moda/wght-italic.css";
 @import "@fontsource-variable/manrope/index.css";
 @import "@fontsource/pinyon-script/400.css";
 
@@ -43,7 +43,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .t-kicker { display: inline-flex; align-items: center; gap: .7rem; font: 700 .64rem/1 var(--f-texto); letter-spacing: .22em; text-transform: uppercase; color: var(--tinta-2); }
 .t-kicker i { width: 5px; height: 5px; border-radius: 50%; background: var(--vino); }
 .t-sello { position: relative; width: 168px; aspect-ratio: 1; margin: 2.6rem 0 2.2rem; }
-.t-logo { position: relative; z-index: 2; width: 100%; height: 100%; filter: drop-shadow(0 18px 24px rgba(40, 25, 10, .25)); }
+.t-foto { position: relative; z-index: 2; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 5px var(--crema), 0 0 0 6px var(--oro), 0 24px 34px -14px rgba(40, 25, 10, .45); }
+.t-logo { position: absolute; z-index: 3; right: -12%; bottom: -8%; width: 44%; height: auto; filter: drop-shadow(0 10px 14px rgba(40, 25, 10, .3)); }
 .t-sello-aro { position: absolute; inset: -9%; border-radius: 50%; border: 1px solid color-mix(in srgb, var(--oro) 60%, transparent); }
 .t-sello-texto { position: absolute; inset: -30%; width: 160%; max-width: none; height: 160%; overflow: visible; animation: girar 32s linear infinite; }
 .t-sello-texto text { font: 700 8.4px var(--f-texto); letter-spacing: .3em; fill: var(--tinta); }
