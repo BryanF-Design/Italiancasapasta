@@ -3,75 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Fernando López | Italian Casa Pasta</title>
+<title>Fernando López · Italian Casa Pasta</title>
 <meta name="description" content="Tarjeta digital de Fernando López, dueño y cocinero de Italian Casa Pasta en San Miguel de Allende. WhatsApp, Instagram, TikTok y Uber Eats.">
-<meta name="theme-color" content="#F2C230">
-<meta property="og:title" content="Fernando López | Italian Casa Pasta">
+<meta name="theme-color" content="#1E3A2B">
+<meta property="og:title" content="Fernando López · Italian Casa Pasta">
 <meta property="og:description" content="Pasta fresca, recién hecha como en casa, en San Miguel de Allende.">
-<meta property="og:image" content="/img/og.jpg">
+<meta property="og:image" content="https://italiancasapasta.vercel.app/img/og.jpg">
 <link rel="icon" type="image/png" href="/img/favicon.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&family=Yesteryear&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/estilos.css">
-<style>
-@view-transition{navigation:auto}
-body{background:var(--amarillo);min-height:100svh;display:grid;place-items:center;padding:2rem 1rem calc(2rem + env(safe-area-inset-bottom))}
-.tarjeta{width:min(100%,420px);background:var(--crema);border-radius:32px;overflow:hidden;box-shadow:0 0 3px var(--dorado),0 40px 80px -30px color-mix(in oklch,var(--vino) 55%,transparent);text-align:center;content-visibility:auto}
-.tarjeta__arriba{background:var(--vino);padding:2rem 1.5rem 4.6rem;position:relative}
-.tarjeta__arriba::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--bandera-v) 0 33.3%,var(--papel) 33.3% 66.6%,var(--bandera-r) 66.6%)}
-.tarjeta__arriba p{font:400 2rem/1 var(--f-script);color:var(--amarillo);margin:.4rem 0 0}
-.tarjeta__foto{width:150px;height:150px;margin:-4.2rem auto 0;position:relative;border-radius:50%;background:var(--crema);box-shadow:0 0 0 5px var(--crema),0 0 0 7px var(--dorado)}
-.tarjeta__foto img{width:100%;height:100%;object-fit:contain}
-.tarjeta__cuerpo{padding:1.4rem 1.5rem 1.8rem}
-.tarjeta h1{font-size:2.3rem;font-weight:900;color:var(--vino)}
-.tarjeta__rol{font-weight:700;color:var(--verde);margin:.4rem 0 .9rem}
-.tarjeta__bio{color:var(--tinta-2);font-size:1rem;margin-bottom:1.4rem}
-.tarjeta__frase{font:400 1.9rem/1 var(--f-script);color:var(--vino);margin:0 0 1.4rem}
-.enlaces{display:grid;gap:.6rem}
-.enlace{display:flex;align-items:center;gap:.9rem;min-height:58px;padding:.7rem 1rem;border-radius:16px;text-decoration:none;text-align:left;font-weight:700;transition:transform .2s var(--suave),box-shadow .2s}
-.enlace:hover{transform:translateY(-3px);box-shadow:0 12px 22px -12px color-mix(in oklch,var(--tinta) 45%,transparent)}
-.enlace:active{transform:scale(.98)}
-.enlace small{display:block;font-weight:500;opacity:.85}
-.enlace--wa{background:var(--wa);color:#fff}
-.enlace--vino{background:var(--vino);color:var(--papel)}
-.enlace--verde{background:var(--verde);color:var(--papel)}
-.enlace--claro{background:var(--papel);color:var(--vino);border:2px solid color-mix(in oklch,var(--vino) 25%,transparent)}
-.enlace--dorado{background:var(--dorado);color:var(--tinta)}
-.tarjeta__pie{font-size:.85rem;color:var(--tinta-2);margin-top:1.2rem}
-.tarjeta__pie a{color:var(--vino);font-weight:700}
-@keyframes entra{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
-.tarjeta{animation:entra .9s var(--suave) both}
-.enlace{animation:entra .7s var(--suave) both}
-.enlace:nth-child(2){animation-delay:.06s}.enlace:nth-child(3){animation-delay:.12s}.enlace:nth-child(4){animation-delay:.18s}.enlace:nth-child(5){animation-delay:.24s}.enlace:nth-child(6){animation-delay:.3s}.enlace:nth-child(7){animation-delay:.36s}.enlace:nth-child(8){animation-delay:.42s}
-@media (prefers-reduced-motion:reduce){.tarjeta,.enlace{animation:none}}
-</style>
+<script type="module" src="/src/tarjeta.js"></script>
 </head>
-<body>
-<main class="tarjeta">
-  <div class="tarjeta__arriba"><p>Desde el corazón de México</p></div>
-  <div class="tarjeta__foto">
-    <picture><source srcset="/img/logo.webp" type="image/webp"><img src="/img/logo.png" alt="Logo de Italian Casa Pasta" width="150" height="150"></picture>
+<body class="t-body">
+<main class="t">
+  <div class="t-arriba">
+    <p class="t-kicker">Italian Casa Pasta</p>
+    <p class="t-script">Desde el corazón de México</p>
   </div>
-  <div class="tarjeta__cuerpo">
-    <h1>Fernando López</h1>
-    <p class="tarjeta__rol">Dueño y cocinero · Italian Casa Pasta</p>
-    <p class="tarjeta__bio">Pasta fresca, recién hecha como en casa, en San Miguel de Allende. Él cocina, atiende y construyó el local con sus manos.</p>
-    <p class="tarjeta__frase">“Yo mismo te voy a atender.”</p>
-    <div class="enlaces">
-      <a class="enlace enlace--vino" href="/fernando-lopez.vcf" download>▦<span>Guardar contacto<small>Fernando López · Italian Casa Pasta</small></span></a>
-      <a class="enlace enlace--wa" href="https://wa.me/524152157489?text=Hola%20Fernando%2C%20quiero%20pedir%20en%20Italian%20Casa%20Pasta.">✆<span>WhatsApp<small>415 215 7489 · Pide tu pasta</small></span></a>
-      <a class="enlace enlace--claro" href="tel:+524152157489">☎<span>Llamar<small>415 215 7489</small></span></a>
-      <a class="enlace enlace--verde" href="https://www.instagram.com/italian_casapasta">◎<span>Instagram del restaurante<small>@italian_casapasta</small></span></a>
-      <a class="enlace enlace--claro" href="https://www.instagram.com/fernando_lopez2222">◎<span>Instagram de Fernando<small>@fernando_lopez2222</small></span></a>
-      <a class="enlace enlace--claro" href="https://www.tiktok.com/@fernando.milatido">♪<span>TikTok de Fernando<small>@fernando.milatido</small></span></a>
-      <a class="enlace enlace--dorado" href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg">◉<span>Uber Eats<small>4.5 estrellas · Pide en la app</small></span></a>
-      <a class="enlace enlace--claro" href="https://www.google.com/maps/search/?api=1&query=Italian+Casa+Pasta+San+Miguel+de+Allende">⌖<span>Cómo llegar<small>5 de Mayo #2 · Martes a domingo, 1:00 a 10:00 pm</small></span></a>
+  <div class="t-logo"><img src="/img/logo.webp" alt="Logo de Italian Casa Pasta" width="160" height="160"></div>
+  <div class="t-cuerpo">
+    <h1>Fernando <em>López</em></h1>
+    <p class="t-rol">Dueño y cocinero</p>
+    <p class="t-bio">Pasta fresca, recién hecha como en casa, en San Miguel de Allende. Él cocina, atiende y construyó el local con sus manos.</p>
+    <p class="t-frase">“Yo mismo te voy a atender.”</p>
+    <div class="t-enlaces">
+      <a class="t-enlace t-enlace--vino" href="/fernando-lopez.vcf" download><span class="t-ico t-ico--txt" aria-hidden="true">＋</span><span>Guardar contacto<small>Fernando López · Italian Casa Pasta</small></span></a>
+      <a class="t-enlace t-enlace--wa" href="https://wa.me/524152157489?text=Hola%20Fernando%2C%20quiero%20pedir%20en%20Italian%20Casa%20Pasta."><span class="t-ico" data-icon="whatsapp"></span><span>WhatsApp<small>415 215 7489 · Pide tu pasta</small></span></a>
+      <a class="t-enlace" href="tel:+524152157489"><span class="t-ico t-ico--txt" aria-hidden="true">☎</span><span>Llamar<small>415 215 7489</small></span></a>
+      <a class="t-enlace" href="https://www.instagram.com/italian_casapasta"><span class="t-ico t-ico--ig" data-icon="instagram"></span><span>Instagram del restaurante<small>@italian_casapasta</small></span></a>
+      <a class="t-enlace" href="https://www.instagram.com/fernando_lopez2222"><span class="t-ico t-ico--ig" data-icon="instagram"></span><span>Instagram de Fernando<small>@fernando_lopez2222</small></span></a>
+      <a class="t-enlace" href="https://www.tiktok.com/@fernando.milatido"><span class="t-ico" data-icon="tiktok"></span><span>TikTok de Fernando<small>@fernando.milatido</small></span></a>
+      <a class="t-enlace" href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg"><span class="t-ico t-ico--uber" data-icon="ubereats"></span><span>Uber Eats<small>4.5 estrellas · Pide en la app</small></span></a>
+      <a class="t-enlace" href="https://www.google.com/maps/search/?api=1&query=Italian+Casa+Pasta+San+Miguel+de+Allende"><span class="t-ico t-ico--maps" data-icon="googlemaps"></span><span>Cómo llegar<small>5 de Mayo #2 · Martes a domingo, 1:00 a 10:00 pm</small></span></a>
     </div>
-    <p class="tarjeta__pie">¿Ya conoces el sitio? <a href="/">italiancasapasta.vercel.app</a><br>© <span id="anio">2026</span> Italian Casa Pasta</p>
+    <p class="t-pie"><a href="/">Ver el sitio y armar tu plato →</a><br>© <span id="anio">2026</span> Italian Casa Pasta</p>
   </div>
 </main>
-<script type="module">document.getElementById("anio").textContent = new Date().getFullYear();</script>
 </body>
 </html>

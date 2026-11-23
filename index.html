@@ -3,25 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Italian Casa Pasta | Arma tu propio plato desde $79 en San Miguel de Allende</title>
-<meta name="description" content="Pasta fresca, recién hecha como en casa, en San Miguel de Allende. Arma tu propio plato desde $79 y pide directo por WhatsApp al 415 215 7489. 5 de Mayo #2.">
-<meta name="theme-color" content="#F5F4E6">
+<title>Italian Casa Pasta · Pasta fresca hecha a mano en San Miguel de Allende</title>
+<meta name="description" content="Pasta fresca, hecha a mano y servida como en casa en San Miguel de Allende. Arma tu propio platillo desde $79 y pide directo por WhatsApp al 415 215 7489. 5 de Mayo #2.">
+<meta name="theme-color" content="#F5EFE3">
 <link rel="canonical" href="https://italiancasapasta.vercel.app/">
 <meta property="og:type" content="restaurant">
 <meta property="og:locale" content="es_MX">
 <meta property="og:url" content="https://italiancasapasta.vercel.app/">
-<meta property="og:title" content="Italian Casa Pasta | Arma tu propio plato desde $79">
+<meta property="og:title" content="Italian Casa Pasta · Arma tu platillo desde $79">
 <meta property="og:description" content="Todo recién hecho como en casa, en San Miguel de Allende. Pide directo por WhatsApp y sin gastar de más.">
 <meta property="og:image" content="https://italiancasapasta.vercel.app/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/img/favicon.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Yesteryear&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="/img/logo.webp">
-<link rel="preload" as="image" href="/img/platos-1000.webp" imagesrcset="/img/platos-600.webp 600w, /img/platos-1000.webp 1000w" imagesizes="(min-width: 960px) 44vw, 92vw" fetchpriority="high">
-<link rel="stylesheet" href="/css/estilos.css">
+<link rel="preload" as="image" href="/img/logo.webp" fetchpriority="high">
+<link rel="preload" as="image" href="/img/platos-cut/plato-3.webp">
+<script>document.documentElement.classList.add("js")</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,6 +31,7 @@
   "servesCuisine": ["Italiana", "Pasta"],
   "priceRange": "$",
   "telephone": "+52 415 215 7489",
+  "menu": "https://italiancasapasta.vercel.app/#carta",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "5 de Mayo #2, cerca de Papelería y Más",
@@ -58,292 +56,577 @@
   ]
 }
 </script>
+<script type="module" src="/src/main.js"></script>
 </head>
 <body>
-<div class="pre" id="pre" role="status" aria-label="Cargando Italian Casa Pasta">
-  <div>
-    <picture>
-      <source srcset="/img/logo.webp" type="image/webp">
-      <img class="pre-logo" src="/img/logo.png" alt="Italian Casa Pasta" width="300" height="300">
-    </picture>
-    <p class="pre-frase">Desde el corazón de México</p>
-    <div class="pre-barra" aria-hidden="true"><span></span></div>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<!-- ============ PRELOADER: la pasta se cocina, la cámara sube y el plato se vuelve el logo ============ -->
+<div class="pre" id="pre" role="status" aria-live="polite" aria-label="Cargando Italian Casa Pasta">
+  <div class="pre-grano" aria-hidden="true"></div>
+  <div class="pre-escena">
+    <svg class="pre-svg" id="pre-svg" viewBox="0 0 400 400" aria-hidden="true">
+      <defs>
+        <clipPath id="pre-clip-olla"><rect x="60" y="-200" width="280" height="392"/></clipPath>
+        <radialGradient id="pre-g-plato" cx="45%" cy="40%" r="65%">
+          <stop offset="0" stop-color="#FFFDF8"/><stop offset=".75" stop-color="#F4EDE0"/><stop offset="1" stop-color="#E3D7C1"/>
+        </radialGradient>
+        <radialGradient id="pre-g-agua" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#3A6A52"/><stop offset="1" stop-color="#244A37"/>
+        </radialGradient>
+      </defs>
+      <!-- fuego -->
+      <g id="pre-fuego">
+        <path d="M168 318 C160 300 172 292 170 278 C182 290 184 304 176 318Z" fill="#E79A3A"/>
+        <path d="M192 320 C182 296 198 284 196 264 C212 282 214 302 204 320Z" fill="#D9682A"/>
+        <path d="M216 318 C208 300 220 292 218 278 C230 290 232 304 224 318Z" fill="#E79A3A"/>
+        <path d="M150 322 L250 322" stroke="#B98A3E" stroke-width="2" stroke-linecap="round"/>
+      </g>
+      <!-- olla, vista lateral -->
+      <g id="pre-olla">
+        <path id="pre-olla-cuerpo" d="M92 190 L104 300 Q106 312 120 312 L280 312 Q294 312 296 300 L308 190" fill="none" stroke="#B98A3E" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M92 214 Q72 214 70 226 Q72 236 94 234" fill="none" stroke="#B98A3E" stroke-width="2.4"/>
+        <path d="M308 214 Q328 214 330 226 Q328 236 306 234" fill="none" stroke="#B98A3E" stroke-width="2.4"/>
+        <g id="pre-burbujas" fill="none" stroke="#9FC1AC" stroke-width="1.4"></g>
+      </g>
+      <!-- vapor -->
+      <g id="pre-vapor" fill="none" stroke="#F5EFE3" stroke-width="2" stroke-linecap="round" opacity=".7">
+        <path d="M160 160 C150 140 172 128 162 106 C154 90 168 78 164 64"/>
+        <path d="M200 156 C190 134 214 122 202 98 C194 82 210 70 204 50"/>
+        <path d="M240 160 C230 140 252 128 242 106 C234 90 248 78 244 64"/>
+      </g>
+      <!-- spaghetti cayendo a la olla -->
+      <g clip-path="url(#pre-clip-olla)"><g id="pre-hebras" stroke="#EDCB7F" stroke-width="2.6" stroke-linecap="round">
+        <line x1="170" y1="-120" x2="186" y2="60"/><line x1="176" y1="-118" x2="190" y2="62"/>
+        <line x1="182" y1="-122" x2="194" y2="60"/><line x1="188" y1="-116" x2="198" y2="64"/>
+        <line x1="194" y1="-120" x2="202" y2="62"/><line x1="200" y1="-118" x2="206" y2="60"/>
+        <line x1="206" y1="-122" x2="210" y2="64"/><line x1="212" y1="-116" x2="214" y2="62"/>
+        <line x1="218" y1="-120" x2="218" y2="60"/><line x1="224" y1="-118" x2="222" y2="64"/>
+        <line x1="230" y1="-121" x2="226" y2="61"/>
+      </g></g>
+      <!-- borde: en la vista lateral es la boca de la olla; desde arriba se vuelve el plato -->
+      <ellipse id="pre-borde" cx="200" cy="190" rx="108" ry="22" fill="url(#pre-g-agua)" stroke="#B98A3E" stroke-width="2.4"/>
+      <!-- emplatado, vista aérea -->
+      <g id="pre-aereo">
+        <circle id="pre-hondo" cx="200" cy="200" r="78" fill="none" stroke="#E2D6BF" stroke-width="1.6"/>
+        <g id="pre-nido" fill="none" stroke-linecap="round"></g>
+        <path id="pre-salsa" d="M200 168 C222 166 236 182 234 202 C232 224 214 236 196 234 C176 232 164 216 166 198 C168 180 180 170 200 168Z" fill="#C2361F"/>
+        <g id="pre-hojas">
+          <path d="M200 200 C208 190 224 190 232 200 C224 210 208 210 200 200Z" fill="#3C7A2B"/>
+          <path d="M200 200 C196 188 202 174 214 170 C216 182 210 196 200 200Z" fill="#4E9238"/>
+          <path d="M200 200 C188 204 176 198 172 188 C184 184 196 190 200 200Z" fill="#3C7A2B"/>
+        </g>
+        <g id="pre-queso" fill="#FBF3D9"></g>
+      </g>
+      <!-- anillos dorados del logo -->
+      <circle id="pre-aro-1" cx="200" cy="200" r="116" fill="none" stroke="#B98A3E" stroke-width="1.6"/>
+      <circle id="pre-aro-2" cx="200" cy="200" r="124" fill="none" stroke="#B98A3E" stroke-width=".8"/>
+    </svg>
+    <img class="pre-logo" id="pre-logo" src="/img/logo.webp" alt="" width="512" height="512" decoding="sync">
   </div>
+  <div class="pre-pie">
+    <p class="pre-fase" id="pre-fase">Hirviendo el agua</p>
+    <p class="pre-num" aria-hidden="true"><span id="pre-num">0</span><small>%</small></p>
+  </div>
+  <p class="pre-frase" id="pre-frase">Desde el corazón de México</p>
+  <button class="pre-saltar" id="pre-saltar" type="button">Saltar intro</button>
 </div>
-<header class="barra">
+
+<!-- ============ TELÓN para transiciones entre secciones ============ -->
+<div class="telon" id="telon" aria-hidden="true">
+  <div class="telon-panel"></div>
+  <p class="telon-titulo" id="telon-titulo">La carta</p>
+</div>
+
+<!-- ============ CURSOR ============ -->
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-punto"></span><span class="cursor-aro"><span class="cursor-texto" id="cursor-texto"></span></span></div>
+
+<!-- ============ ENCABEZADO FLOTANTE ============ -->
+<header class="barra" id="barra">
   <div class="barra-in">
-    <a class="barra-logo" href="#inicio" aria-label="Italian Casa Pasta, ir al inicio">
-      <picture>
-        <source srcset="/img/logo.webp" type="image/webp">
-        <img src="/img/logo.png" alt="" width="52" height="52">
-      </picture>
-      <span class="barra-nombre">Italian Casa Pasta<small>Desde el corazón de México</small></span>
+    <div class="barra-izq">
+      <button class="hamburguesa" id="abrir-menu" type="button" aria-expanded="false" aria-controls="menu" data-cursor="Menú">
+        <span class="hamburguesa-lineas" aria-hidden="true"><i></i><i></i></span><span class="hamburguesa-txt">Menú</span>
+      </button>
+      <nav class="barra-nav" aria-label="Principal">
+        <a href="#arma" data-ir="Arma tu plato">Arma tu plato</a>
+        <a href="#carta" data-ir="La carta">La carta</a>
+        <a href="#conocenos" data-ir="Conócenos">Conócenos</a>
+      </nav>
+    </div>
+    <a class="barra-logo" href="#inicio" data-ir="Inicio" aria-label="Italian Casa Pasta, ir al inicio">
+      <img id="barra-logo-img" src="/img/logo.webp" alt="" width="64" height="64">
     </a>
-    <nav class="nav-escritorio" aria-label="Principal">
-      <a href="#arma">Arma tu plato</a>
-      <a href="#recomendados">Recomendados</a>
-      <a href="#carta">La carta</a>
-      <a href="#historia">Nuestra historia</a>
-      <a href="#ubicacion">Ubicación</a>
-    </nav>
-    <a class="btn btn--vino btn--peq barra-pedir" href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20quiero%20pedir.">Pedir por WhatsApp</a>
-    <button class="nav-btn" type="button" popovertarget="menu-movil" aria-label="Abrir menú">☰ Menú</button>
+    <div class="barra-der">
+      <span class="estado" data-estado><i class="estado-punto"></i><span class="estado-txt">Martes a domingo</span></span>
+      <a class="btn btn--wa btn--peq" href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20quiero%20pedir." data-wa data-icon="whatsapp" data-cursor="Pedir">Pedir</a>
+    </div>
   </div>
 </header>
-<nav id="menu-movil" popover aria-label="Menú móvil">
-  <div class="nav-enlaces">
-    <a class="nav-enlace" href="#arma">Arma tu plato <span>→</span></a>
-    <a class="nav-enlace" href="#recomendados">Recomendados <span>→</span></a>
-    <a class="nav-enlace" href="#carta">La carta <span>→</span></a>
-    <a class="nav-enlace" href="#historia">Nuestra historia <span>→</span></a>
-    <a class="nav-enlace" href="#galeria">Galería <span>→</span></a>
-    <a class="nav-enlace" href="#ubicacion">Ubicación <span>→</span></a>
-    <a class="nav-enlace" href="#faqs">Preguntas frecuentes <span>→</span></a>
-  </div>
-  <a class="btn btn--wa nav-cerrar" href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20quiero%20pedir.">Pedir por WhatsApp</a>
-  <button class="btn btn--linea nav-cerrar" type="button" popovertarget="menu-movil" popovertargetaction="hide">Cerrar menú</button>
-</nav>
-<main id="contenido">
-<section class="hero" id="inicio">
-  <div class="hero-media">
-    <picture>
-      <source srcset="/img/platos-600.webp 600w, /img/platos-1000.webp 1000w" sizes="(min-width: 960px) 100vw, 100vw" type="image/webp">
-      <img src="/img/platos-1000.jpg" alt="Platos de pasta recién servidos en Italian Casa Pasta" fetchpriority="high" width="1000" height="1000">
-    </picture>
-  </div>
-  <div class="hero-in">
-    <p class="hero-etiqueta">★ 4.8 en Google, más de 90 reseñas</p>
-    <h1><span class="script">Desde el corazón de México</span>Arma tu propio plato<span class="salto">desde $79</span></h1>
-    <p class="hero-sub">Pasta fresca, hecha a diario y servida como en casa. Tú eliges la pasta, la salsa y lo que lleva. Yo mismo te voy a atender.</p>
-    <div class="hero-cta">
-      <a class="btn btn--wa btn--grande" href="#arma">Arma tu plato</a>
-      <a class="btn btn--claro btn--grande" href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20quiero%20pedir.">Pedir por WhatsApp</a>
+
+<!-- ============ MENÚ OFF-CANVAS ============ -->
+<div class="menu" id="menu" aria-hidden="true" inert>
+  <div class="menu-fondo"></div>
+  <div class="menu-in">
+    <div class="menu-col">
+      <p class="menu-kicker">Italian Casa Pasta · San Miguel de Allende</p>
+      <nav class="menu-links" aria-label="Menú">
+        <a href="#inicio" data-ir="Inicio" data-foto="plato-3"><span class="menu-n">01</span><span class="menu-t">Inicio</span></a>
+        <a href="#arma" data-ir="Arma tu plato" data-foto="plato-1"><span class="menu-n">02</span><span class="menu-t">Arma tu <em>plato</em></span></a>
+        <a href="#favoritos" data-ir="Favoritos" data-foto="plato-4"><span class="menu-n">03</span><span class="menu-t">Favoritos</span></a>
+        <a href="#carta" data-ir="La carta" data-foto="plato-5"><span class="menu-n">04</span><span class="menu-t">La <em>carta</em></span></a>
+        <a href="#conocenos" data-ir="Conócenos" data-foto="cocina"><span class="menu-n">05</span><span class="menu-t">Conó<em>cenos</em></span></a>
+        <a href="#visitanos" data-ir="Visítanos" data-foto="pedidos"><span class="menu-n">06</span><span class="menu-t">Visí<em>tanos</em></span></a>
+      </nav>
     </div>
-    <p class="hero-datos"><span>Martes a domingo, <strong>1:00 a 10:00 pm</strong></span><span>5 de Mayo #2, San Miguel de Allende</span><span>Envío <strong>$20</strong></span></p>
-  </div>
-</section>
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-pista">
-    <span>Todo recién hecho como en casa <b>•</b> Pasta fresca todos los días <b>•</b> Arma tu propio plato <b>•</b> Sin gastar de más <b>•</b> Desde el corazón de México <b>•</b> </span>
-    <span>Todo recién hecho como en casa <b>•</b> Pasta fresca todos los días <b>•</b> Arma tu propio plato <b>•</b> Sin gastar de más <b>•</b> Desde el corazón de México <b>•</b> </span>
+    <div class="menu-col menu-col--info">
+      <div class="menu-foto"><img id="menu-foto" src="/img/platos-cut/plato-3.webp" alt="" width="720" height="720" loading="lazy"></div>
+      <div class="menu-datos">
+        <p><strong>5 de Mayo #2</strong><br>San Miguel de Allende, Gto.</p>
+        <p><strong>Martes a domingo</strong><br>1:00 a 10:00 pm</p>
+        <p><a href="tel:+524152157489">415 215 7489</a></p>
+      </div>
+      <div class="menu-redes">
+        <a href="https://www.instagram.com/italian_casapasta" data-icon="instagram" aria-label="Instagram"></a>
+        <a href="https://www.tiktok.com/@fernando.milatido" data-icon="tiktok" aria-label="TikTok"></a>
+        <a href="https://wa.me/524152157489" data-icon="whatsapp" aria-label="WhatsApp"></a>
+        <a href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg" data-icon="ubereats" aria-label="Uber Eats"></a>
+      </div>
+    </div>
+    <button class="menu-cerrar" id="cerrar-menu" type="button" data-cursor="Cerrar"><span aria-hidden="true">×</span> Cerrar</button>
   </div>
 </div>
-<section class="seccion armador" id="arma">
-  <div class="contenedor">
-    <p class="kicker revela">Arma tu platillo</p>
-    <h2 class="titulo-seccion revela">Tu pasta, a tu manera</h2>
-    <p class="sub revela">Elige en 4 pasos y pide por WhatsApp. El total se actualiza en vivo, sin sorpresas.</p>
-    <div class="armador-grid">
-      <div>
-        <div class="armador-progreso"><span id="paso-actual">Paso 1 de 4</span><div class="barra"><span id="barra-progreso"></span></div></div>
-        <div class="paso" data-paso-n="1" id="paso-1">
-          <p class="paso-leyenda">1. Elige tu pasta</p>
+
+<main id="contenido">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio" data-seccion="Inicio">
+  <div class="hero-pin">
+    <p class="hero-kicker" data-anim="aparece"><span>Pasta fresca</span><i></i><span>San Miguel de Allende</span></p>
+    <h1 class="hero-titulo" aria-label="Pasta">
+      <span class="hero-pa" aria-hidden="true"><span>P</span><span>A</span></span>
+      <span class="hero-plato" aria-hidden="true">
+        <span class="hero-vapor"><i></i><i></i><i></i></span>
+        <img src="/img/platos-cut/plato-3.webp" alt="" width="720" height="720" fetchpriority="high">
+        <svg class="hero-sello" viewBox="0 0 200 200">
+          <defs><path id="circulo-sello" d="M100 100 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0"/></defs>
+          <text><textPath href="#circulo-sello">HECHA A MANO · TODOS LOS DÍAS · DESDE EL CORAZÓN DE MÉXICO · </textPath></text>
+        </svg>
+      </span>
+      <span class="hero-sta" aria-hidden="true"><span>S</span><span>T</span><span>A</span></span>
+    </h1>
+    <p class="hero-sub" data-anim="aparece">Hecha a mano y servida <em>como en casa</em>.<br>Tú eliges la pasta, la salsa y lo que lleva.</p>
+    <div class="hero-cta" data-anim="aparece">
+      <a class="btn btn--vino btn--grande" href="#arma" data-ir="Arma tu plato" data-cursor="Armar">Arma tu plato <span class="btn-precio">desde $79</span></a>
+      <a class="btn btn--linea btn--grande" href="#carta" data-ir="La carta">Ver la carta</a>
+    </div>
+    <div class="hero-pie">
+      <a class="hero-dato" href="https://www.google.com/maps/search/?api=1&query=Italian+Casa+Pasta+San+Miguel+de+Allende" data-icon="google"><span><strong>4.8 ★</strong> en Google · +90 reseñas</span></a>
+      <span class="hero-scroll" aria-hidden="true"><i></i>Desliza</span>
+      <span class="hero-dato"><span><strong>Mar a Dom</strong> · 1:00 a 10:00 pm · Envío $20</span></span>
+    </div>
+    <svg class="hoja hoja--1" viewBox="0 0 120 60" aria-hidden="true"><path d="M2 30 C30 -4 86 -4 118 30 C86 64 30 64 2 30Z" fill="#3C7A2B"/><path d="M6 30 L112 30" stroke="#2A5A1C" stroke-width="2" fill="none"/></svg>
+    <svg class="hoja hoja--2" viewBox="0 0 120 60" aria-hidden="true"><path d="M2 30 C30 -4 86 -4 118 30 C86 64 30 64 2 30Z" fill="#4E9238"/><path d="M6 30 L112 30" stroke="#2A5A1C" stroke-width="2" fill="none"/></svg>
+    <svg class="hoja hoja--3" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="26" fill="#C2361F"/><circle cx="30" cy="30" r="26" fill="none" stroke="#8C2A22" stroke-width="2"/><path d="M30 6 C34 12 40 10 44 6 M30 6 C26 12 20 10 16 6" stroke="#3C7A2B" stroke-width="4" fill="none" stroke-linecap="round"/><ellipse cx="21" cy="22" rx="6" ry="3.5" fill="#fff" opacity=".35" transform="rotate(-35 21 22)"/></svg>
+  </div>
+</section>
+
+<!-- ============ CINTA ============ -->
+<div class="cinta" aria-hidden="true">
+  <div class="cinta-pista">
+    <span>Fettuccine <b>✦</b> Penne <b>✦</b> Spaghetti <b>✦</b> Fusilli <b>✦</b> <em>Pomodoro</em> <b>✦</b> <em>Arrabbiata</em> <b>✦</b> <em>Alfredo</em> <b>✦</b> <em>Pesto</em> <b>✦</b> </span>
+    <span>Fettuccine <b>✦</b> Penne <b>✦</b> Spaghetti <b>✦</b> Fusilli <b>✦</b> <em>Pomodoro</em> <b>✦</b> <em>Arrabbiata</em> <b>✦</b> <em>Alfredo</em> <b>✦</b> <em>Pesto</em> <b>✦</b> </span>
+  </div>
+</div>
+
+<!-- ============ MANIFIESTO (inspirado en editorial) ============ -->
+<section class="manifiesto" id="manifiesto">
+  <h2 class="manifiesto-titulo">
+    <span class="m-linea"><em>Sabor</em> <span class="pastilla"><img src="/img/platos-600.webp" alt="" loading="lazy" width="600" height="800"></span> de casa,</span>
+    <span class="m-linea">hecho <span class="pastilla pastilla--redonda"><img src="/img/platos-cut/plato-5.webp" alt="" loading="lazy" width="720" height="720"></span> <em>a mano</em></span>
+    <span class="m-linea">en San <span class="pastilla"><img src="/img/cocina-600.webp" alt="" loading="lazy" width="600" height="800"></span> Miguel.</span>
+  </h2>
+  <div class="manifiesto-pie">
+    <p data-anim="sube">Cada plato sale de una cocina pequeña donde todo se prepara a diario. Sin atajos ni prisas: la pasta, las salsas y el cariño de quien te atiende en persona.</p>
+    <ul class="pilares">
+      <li data-anim="sube"><span class="pilar-num">01</span><strong>Fresco, diario</strong><small>Pastas y salsas preparadas cada día</small></li>
+      <li data-anim="sube"><span class="pilar-num">02</span><strong>Desde $79</strong><small>Tu plato base, armado a tu gusto</small></li>
+      <li data-anim="sube"><span class="pilar-num">03</span><strong>Envío $20</strong><small>O pasa por él a 5 de Mayo #2</small></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ ARMA TU PLATILLO ============ -->
+<section class="arma" id="arma" data-seccion="Arma tu plato">
+  <div class="arma-encabezado">
+    <p class="kicker" data-anim="aparece">Arma tu platillo</p>
+    <h2 class="titulo" data-split>Tu pasta, <em>a tu manera</em></h2>
+    <p class="sub" data-anim="sube">Elige y mira cómo se arma tu plato. El total se actualiza en vivo, sin sorpresas.</p>
+  </div>
+  <div class="arma-grid">
+    <div class="arma-escenario" id="escenario">
+      <div class="mesa">
+        <div class="mesa-pila" id="pila" aria-hidden="true"></div>
+        <div class="mesa-vapor" aria-hidden="true"><i></i><i></i><i></i></div>
+        <svg class="plato-svg" id="plato-svg" viewBox="0 0 500 500" role="img" aria-label="Vista previa de tu platillo"></svg>
+        <img class="plato-real" id="plato-real" src="/img/platos-cut/plato-1.webp" alt="" width="720" height="720" loading="lazy">
+        <div class="ticket" id="ticket">
+          <span class="ticket-et">Tu plato</span>
+          <strong class="ticket-total" id="ticket-total">$79</strong>
+          <span class="ticket-cant" id="ticket-cant">1 plato</span>
+        </div>
+      </div>
+      <p class="arma-nombre" id="arma-nombre" aria-live="polite">Fettuccine</p>
+      <div class="arma-favorito" id="arma-favorito" hidden>
+        <span>✦ Es uno de nuestros favoritos</span>
+        <button type="button" id="ver-real" class="enlace-sub" aria-pressed="false">Ver foto real</button>
+      </div>
+    </div>
+
+    <div class="arma-panel">
+      <ol class="pasos-nav" role="tablist" aria-label="Pasos">
+        <li><button type="button" role="tab" data-ir-paso="1" aria-selected="true"><span>01</span>Pasta</button></li>
+        <li><button type="button" role="tab" data-ir-paso="2" aria-selected="false"><span>02</span>Salsa</button></li>
+        <li><button type="button" role="tab" data-ir-paso="3" aria-selected="false"><span>03</span>Extras</button></li>
+        <li><button type="button" role="tab" data-ir-paso="4" aria-selected="false"><span>04</span>Entrega</button></li>
+        <li class="pasos-linea" aria-hidden="true"><i id="pasos-progreso"></i></li>
+      </ol>
+
+      <div class="pasos" id="pasos">
+        <div class="paso" data-paso="1" role="tabpanel">
+          <h3 class="paso-titulo">Elige tu <em>pasta</em></h3>
           <p class="paso-ayuda">Base $79, incluye tu pasta favorita.</p>
-          <div class="chips" id="chips-pasta" role="group" aria-label="Pasta"></div>
-          <div class="paso-acciones"><button class="btn btn--vino" type="button" data-paso="2">Siguiente: la salsa →</button></div>
+          <div class="opciones" id="op-pasta" role="radiogroup" aria-label="Pasta"></div>
         </div>
-        <div class="paso" data-paso-n="2" id="paso-2" hidden>
-          <p class="paso-leyenda">2. Elige tu salsa</p>
-          <p class="paso-ayuda">Puedes seguir sin salsa, o elegir una.</p>
-          <div class="chips" id="chips-salsa" role="group" aria-label="Salsa"></div>
-          <div class="paso-acciones"><button class="btn btn--linea" type="button" data-paso="1">← Atrás</button><button class="btn btn--vino" type="button" data-paso="3">Siguiente: proteína o vegetal →</button></div>
+        <div class="paso" data-paso="2" role="tabpanel" hidden>
+          <h3 class="paso-titulo">Elige tu <em>salsa</em></h3>
+          <p class="paso-ayuda">Una salsa, o déjala sin salsa si así te gusta.</p>
+          <div class="opciones" id="op-salsa" role="radiogroup" aria-label="Salsa"></div>
         </div>
-        <div class="paso" data-paso-n="3" id="paso-3" hidden>
-          <p class="paso-leyenda">3. Proteína o vegetal</p>
+        <div class="paso" data-paso="3" role="tabpanel" hidden>
+          <h3 class="paso-titulo">Proteína o <em>vegetal</em></h3>
           <p class="paso-ayuda">$50 cada uno. Puedes elegir varios.</p>
-          <div class="chips" id="chips-extra" role="group" aria-label="Proteína o vegetal"></div>
-          <label class="entrega-op" style="margin-top:.9rem"><input type="checkbox" id="sin-gluten"><span><strong>Sin gluten <span id="sin-gluten-precio">+$30</span></strong><small>Pastas sin gluten disponibles.</small></span></label>
-          <div class="paso-acciones"><button class="btn btn--linea" type="button" data-paso="2">← Atrás</button><button class="btn btn--vino" type="button" data-paso="4">Ver mi total →</button></div>
+          <div class="opciones" id="op-extra" role="group" aria-label="Proteína o vegetal"></div>
+          <label class="interruptor">
+            <input type="checkbox" id="sin-gluten">
+            <span class="interruptor-ui" aria-hidden="true"></span>
+            <span><strong>Pasta sin gluten <span id="sin-gluten-precio">+$30</span></strong><small>Tenemos pastas sin gluten disponibles.</small></span>
+          </label>
         </div>
-        <div class="paso" data-paso-n="4" id="paso-4" hidden>
-          <p class="paso-leyenda">4. Cantidad y entrega</p>
-          <p class="paso-ayuda">¿Cuántos platos quieres y cómo te lo llevamos?</p>
-          <div class="cant"><button type="button" id="menos" aria-label="Quitar un plato">−</button><span class="cant-num" id="cant-num">1</span><button type="button" id="mas" aria-label="Agregar un plato">+</button><span>plato(s)</span></div>
-          <div class="entrega" style="margin-top:1.2rem">
-            <label class="entrega-op"><input type="radio" name="entrega" value="local" checked><span><strong>Recoger en el local</strong><small>5 de Mayo #2, San Miguel de Allende. Tarjeta en el local.</small></span></label>
-            <label class="entrega-op"><input type="radio" name="entrega" value="envio"><span><strong>Envío a domicilio +$20</strong><small>Te lo llevamos a tu casa.</small></span></label>
+        <div class="paso" data-paso="4" role="tabpanel" hidden>
+          <h3 class="paso-titulo">Cantidad y <em>entrega</em></h3>
+          <p class="paso-ayuda">¿Cuántos platos y cómo te lo llevamos?</p>
+          <div class="cantidad">
+            <button type="button" id="menos" aria-label="Quitar un plato">−</button>
+            <output id="cant-num" aria-live="polite">1</output>
+            <button type="button" id="mas" aria-label="Agregar un plato">+</button>
+            <span>plato(s)</span>
+          </div>
+          <div class="segmentado" role="radiogroup" aria-label="Entrega">
+            <label><input type="radio" name="entrega" value="local" checked><span><strong>Recoger</strong><small>5 de Mayo #2 · Tarjeta en el local</small></span></label>
+            <label><input type="radio" name="entrega" value="envio"><span><strong>A domicilio +$20</strong><small>Te lo llevamos a tu casa</small></span></label>
+            <i class="segmentado-fondo" aria-hidden="true"></i>
           </div>
           <label class="notas-label" for="notas">Notas para tu pedido (opcional)</label>
-          <textarea id="notas" placeholder="Ejemplo: sin cebolla, por favor"></textarea>
-          <div class="paso-acciones"><button class="btn btn--linea" type="button" data-paso="3">← Atrás</button></div>
+          <textarea id="notas" rows="2" placeholder="Ejemplo: sin cebolla, por favor"></textarea>
         </div>
-        <div class="resumen" aria-live="polite">
+      </div>
+
+      <div class="pasos-acciones">
+        <button class="btn btn--linea" type="button" id="paso-atras">← Atrás</button>
+        <button class="btn btn--vino" type="button" id="paso-sig">Siguiente: la salsa →</button>
+      </div>
+
+      <div class="resumen" aria-live="polite">
+        <div class="resumen-cab">
           <h3>Tu pedido</h3>
-          <ul id="resumen-lineas"></ul>
           <p class="resumen-total"><span>Total</span><strong id="total-num">$79</strong></p>
-          <div class="pedir-acciones">
-            <a class="btn btn--wa btn--grande" id="pedir" href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20quiero%20pedir.">Pedir por WhatsApp</a>
-            <button class="btn btn--claro" type="button" id="copiar-pedido">Copiar pedido</button>
-            <a class="btn btn--linea" style="border-color:var(--papel);color:var(--papel)" href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg">Pedir en Uber Eats</a>
-          </div>
+        </div>
+        <ul id="resumen-lineas"></ul>
+        <div class="resumen-acciones">
+          <a class="btn btn--wa btn--grande" id="pedir" href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20quiero%20pedir." data-icon="whatsapp" data-cursor="Pedir">Pedir por WhatsApp</a>
+          <button class="btn btn--linea-claro" type="button" id="copiar-pedido">Copiar pedido</button>
+          <a class="btn btn--linea-claro" href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg" data-icon="ubereats">Uber Eats</a>
         </div>
       </div>
-      <aside class="armador-lateral">
-        <div class="carta-mini">
-          <picture><source srcset="/img/menu-impreso.webp" type="image/webp"><img src="/img/menu-impreso.jpg" alt="Menú impreso de Italian Casa Pasta" loading="lazy" decoding="async" width="800" height="600"></picture>
-          <div class="carta-mini-cuerpo">
-            <h3>El menú del local</h3>
-            <p>Este es el menú impreso que ves en la pared. Los precios de aquí son los mismos.</p>
-            <button class="btn btn--vino btn--peq" type="button" data-visor="menu-impreso">Ver menú impreso</button>
-          </div>
-        </div>
-        <div class="carta-mini"><div class="carta-mini-cuerpo">
-          <h3>Promos de martes y jueves</h3>
-          <p>Martes y jueves tenemos promociones en el local. Pregunta por la promo del día por WhatsApp.</p>
-          <a class="btn btn--wa btn--peq" href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20%C2%BFcu%C3%A1l%20es%20la%20promo%20de%20hoy%3F">Preguntar la promo</a>
-        </div></div>
-      </aside>
     </div>
   </div>
 </section>
-<section class="seccion recomendados" id="recomendados">
-  <div class="contenedor">
-    <p class="kicker revela">Recomendados</p>
-    <h2 class="titulo-seccion revela">Los favoritos de la casa</h2>
-    <p class="sub revela">Si no sabes por dónde empezar, estos 7 son los que más piden. Toca "Pedir este" y se arma solo en el cotizador.</p>
-    <div class="recomendados-lista" id="recomendados-lista"></div>
-    <p class="carta-nota revela" style="color:var(--tinta-2)">Todas nuestras pastas y salsas son frescas, preparadas diariamente con ingredientes de la más alta calidad.</p>
+
+<!-- ============ FAVORITOS (scroll horizontal) ============ -->
+<section class="favoritos" id="favoritos" data-seccion="Favoritos">
+  <div class="favoritos-pin">
+    <div class="favoritos-cab">
+      <p class="kicker" data-anim="aparece">Los favoritos de la casa</p>
+      <h2 class="titulo" data-split>Los que <em>más piden</em></h2>
+      <p class="sub" data-anim="sube">Si no sabes por dónde empezar, empieza aquí. Toca “Pedir este” y se arma solo.</p>
+      <div class="favoritos-ctrl">
+        <span class="favoritos-cuenta"><b id="fav-actual">01</b> / 07</span>
+        <span class="favoritos-barra"><i id="fav-barra"></i></span>
+      </div>
+    </div>
+    <div class="favoritos-pista" id="favoritos-pista"></div>
   </div>
+  <span class="favoritos-fondo" aria-hidden="true">I preferiti</span>
 </section>
-<section class="seccion carta" id="carta">
-  <div class="contenedor">
-    <p class="kicker kicker--claro revela">La carta</p>
-    <h2 class="titulo-seccion titulo-seccion--claro revela">El menú completo</h2>
-    <p class="sub sub--claro revela">Base $79. Arma tu platillo con tu pasta, tu salsa y tu proteína o vegetal.</p>
+
+<!-- ============ LA CARTA ============ -->
+<section class="carta" id="carta" data-seccion="La carta">
+  <div class="carta-marco">
+    <div class="carta-cab">
+      <p class="kicker kicker--claro" data-anim="aparece">La carta</p>
+      <h2 class="titulo titulo--claro" data-split>El menú <em>completo</em></h2>
+      <p class="sub sub--claro" data-anim="sube">Base $79. Arma tu platillo con tu pasta, tu salsa y tu proteína o vegetal.</p>
+      <svg class="ornamento" viewBox="0 0 240 24" aria-hidden="true"><path d="M0 12 H96 M144 12 H240" stroke="currentColor" stroke-width="1"/><path d="M120 2 L130 12 L120 22 L110 12Z" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="120" cy="12" r="2.4" fill="currentColor"/></svg>
+    </div>
     <div class="carta-grid">
-      <div class="carta-bloque revela"><h3>Tu pasta · $79</h3><ul><li><span>Fettuccine</span><strong>$79</strong></li><li><span>Penne</span><strong>$79</strong></li><li><span>Spaghetti</span><strong>$79</strong></li><li><span>Fusilli</span><strong>$79</strong></li></ul></div>
-      <div class="carta-bloque revela"><h3>Tus salsas</h3><ul><li><span>Pomodoro</span><strong>+$15</strong></li><li><span>Arrabbiata</span><strong>+$15</strong></li><li><span>Alfredo</span><strong>+$40</strong></li><li><span>Pesto (contiene nueces)</span><strong>+$40</strong></li></ul></div>
-      <div class="carta-bloque revela"><h3>Proteína o vegetal · $50 c/u</h3><ul><li><span>Pollo a la parrilla</span><strong>+$50</strong></li><li><span>Boloñesa</span><strong>+$50</strong></li><li><span>Vegetales al vapor</span><strong>+$50</strong></li></ul><p style="margin-top:.8rem">Opción sin gluten disponible <strong>+$30</strong>.</p></div>
-    </div>
-    <p class="carta-nota revela">Todas nuestras pastas y salsas son frescas, preparadas diariamente con ingredientes de la más alta calidad.</p>
-    <p class="revela"><button class="btn btn--dorado" type="button" data-visor="menu-impreso">Ver el menú impreso</button></p>
-  </div>
-</section>
-<section class="seccion ubereats" id="ubereats">
-  <div class="contenedor ubereats-grid">
-    <div>
-      <p class="kicker kicker--claro revela">También en Uber Eats</p>
-      <h2 class="titulo-seccion titulo-seccion--claro revela">Pide directo y ahorra</h2>
-      <p class="sub sub--claro revela">El Spaghetti a la Boloñesa Clásica te sale en $129 directo con nosotros. En Uber Eats cuesta $180. Pídelo por WhatsApp y quédate con la diferencia.</p>
-      <p class="precio-compara revela"><span class="precio-directo">$129</span><span class="precio-tachado">$180 en Uber Eats</span><span class="ahorro">Ahorras $51</span></p>
-      <div class="hero-cta revela">
-        <a class="btn btn--wa btn--grande" href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20quiero%20pedir%20el%20Spaghetti%20a%20la%20Bolo%C3%B1esa%20Cl%C3%A1sica%20%24129.">Pedirlo por WhatsApp · $129</a>
-        <a class="btn btn--claro btn--grande" href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg">Ver en Uber Eats · 4.5 ★</a>
+      <div class="carta-bloque" data-anim="sube">
+        <h3><span>I.</span> Tu pasta</h3>
+        <p class="carta-desc">Incluida en tu plato base</p>
+        <ul>
+          <li data-foto="plato-1"><span>Fettuccine</span><i></i><strong>$79</strong></li>
+          <li data-foto="plato-6"><span>Penne</span><i></i><strong>$79</strong></li>
+          <li data-foto="plato-3"><span>Spaghetti</span><i></i><strong>$79</strong></li>
+          <li data-foto="plato-4"><span>Fusilli</span><i></i><strong>$79</strong></li>
+        </ul>
+      </div>
+      <div class="carta-bloque" data-anim="sube">
+        <h3><span>II.</span> Tus salsas</h3>
+        <p class="carta-desc">Preparadas cada día</p>
+        <ul>
+          <li data-foto="plato-6"><span>Pomodoro</span><i></i><strong>+$15</strong></li>
+          <li data-foto="plato-2"><span>Arrabbiata</span><i></i><strong>+$15</strong></li>
+          <li data-foto="plato-7"><span>Alfredo</span><i></i><strong>+$40</strong></li>
+          <li data-foto="plato-5"><span>Pesto <small>contiene nueces</small></span><i></i><strong>+$40</strong></li>
+        </ul>
+      </div>
+      <div class="carta-bloque" data-anim="sube">
+        <h3><span>III.</span> Proteína o vegetal</h3>
+        <p class="carta-desc">$50 cada uno</p>
+        <ul>
+          <li data-foto="plato-1"><span>Pollo a la parrilla</span><i></i><strong>+$50</strong></li>
+          <li data-foto="plato-3"><span>Boloñesa</span><i></i><strong>+$50</strong></li>
+          <li data-foto="plato-2"><span>Vegetales al vapor</span><i></i><strong>+$50</strong></li>
+          <li><span>Opción sin gluten</span><i></i><strong>+$30</strong></li>
+        </ul>
       </div>
     </div>
-    <div class="revela">
-      <p class="sub sub--claro">¿Prefieres la app? También estamos en Uber Eats, con 4.5 estrellas. Ahí el pedido llega por la app; directo por WhatsApp, te atiende Fer.</p>
+    <p class="carta-nota" data-anim="sube">Todas nuestras pastas y salsas son frescas, preparadas diariamente con ingredientes de la más alta calidad.</p>
+    <div class="carta-acciones" data-anim="sube">
+      <button class="btn btn--oro" type="button" data-visor="menu-impreso" data-cursor="Ver">Ver el menú impreso</button>
+      <a class="btn btn--linea-claro" href="#arma" data-ir="Arma tu plato">Armar mi plato</a>
     </div>
   </div>
+  <div class="carta-preview" id="carta-preview" aria-hidden="true"><img src="/img/platos-cut/plato-1.webp" alt="" width="720" height="720"></div>
 </section>
-<section class="seccion historia" id="historia">
-  <div class="contenedor historia-grid">
-    <div class="historia-foto revela">
-      <picture><source srcset="/img/cocina-600.webp 600w, /img/cocina-1000.webp 1000w" sizes="(min-width: 900px) 44vw, 92vw" type="image/webp"><img src="/img/cocina-1000.jpg" alt="La cocina de Italian Casa Pasta" loading="lazy" decoding="async" width="1000" height="750"></picture>
-    </div>
-    <div>
-      <p class="kicker revela">Nuestra historia</p>
-      <h2 class="titulo-seccion revela">Hecho a mano, <span class="script">como en casa</span></h2>
-      <p class="revela">Fernando López tiene 18 años, es de Ciudad Victoria, Tamaulipas, y vive en San Miguel de Allende. Él cocina, atiende y construyó el local con sus manos: pintó las paredes de rojo, verde y amarillo.</p>
-      <p class="revela">Todo lo que sale de la cocina es fresco, preparado a diario. Nada de atajos: pasta, salsas y cada plato se hacen como en casa, con el cariño de quien te atiende en persona.</p>
-      <blockquote class="revela">“Todo recién hecho como en casa. Yo mismo te voy a atender.”<br><small>Fernando López</small></blockquote>
-      <div class="datos">
-        <div class="dato revela"><span class="dato-num">4.8 ★</span><small>en Google, más de 90 reseñas</small></div>
-        <div class="dato revela"><span class="dato-num">4.5 ★</span><small>en Uber Eats</small></div>
-        <div class="dato revela"><span class="dato-num">$79</span><small>tu plato base, armado a tu gusto</small></div>
-        <div class="dato revela"><span class="dato-num">100%</span><small>fresco, preparado a diario</small></div>
+
+<!-- ============ PIDE DIRECTO ============ -->
+<section class="directo" id="directo">
+  <div class="directo-in">
+    <div class="directo-texto">
+      <p class="kicker" data-anim="aparece">Pide directo y ahorra</p>
+      <h2 class="titulo" data-split>El mismo plato, <em>mejor precio</em></h2>
+      <p class="sub" data-anim="sube">El Spaghetti a la Boloñesa Clásica te sale en $129 directo con nosotros. En Uber Eats cuesta $180. Pídelo por WhatsApp y quédate con la diferencia.</p>
+      <div class="hero-cta" data-anim="sube">
+        <a class="btn btn--wa btn--grande" data-icon="whatsapp" href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20quiero%20pedir%20el%20Spaghetti%20a%20la%20Bolo%C3%B1esa%20Cl%C3%A1sica%20%24129.">Pedirlo · $129</a>
+        <a class="btn btn--linea btn--grande" data-icon="ubereats" href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg">Uber Eats · 4.5 ★</a>
       </div>
     </div>
-  </div>
-</section>
-<section class="seccion galeria" id="galeria">
-  <div class="contenedor">
-    <p class="kicker revela">Galería</p>
-    <h2 class="titulo-seccion revela">Un vistazo al local</h2>
-    <p class="sub revela">Toca una foto para verla en grande.</p>
-    <div class="galeria-grid">
-      <button class="gal-item revela" type="button" data-visor="platos"><picture><source srcset="/img/platos-600.webp 600w, /img/platos-1000.webp 1000w" sizes="(min-width: 900px) 88vw, 92vw" type="image/webp"><img src="/img/platos-1000.jpg" alt="Nuestros platos servidos" loading="lazy" decoding="async" width="1000" height="1000"></picture><span>Nuestros platos servidos</span></button>
-      <button class="gal-item revela" type="button" data-visor="cocina"><picture><source srcset="/img/cocina-600.webp 600w, /img/cocina-1000.webp 1000w" sizes="(min-width: 900px) 44vw, 92vw" type="image/webp"><img src="/img/cocina-1000.jpg" alt="Nuestra cocina" loading="lazy" decoding="async" width="1000" height="750"></picture><span>Nuestra cocina</span></button>
-      <button class="gal-item revela" type="button" data-visor="pedidos"><picture><source srcset="/img/pedidos-600.webp 600w, /img/pedidos-1000.webp 1000w" sizes="(min-width: 900px) 44vw, 92vw" type="image/webp"><img src="/img/pedidos-1000.jpg" alt="Pedidos empacados" loading="lazy" decoding="async" width="1000" height="750"></picture><span>Pedidos empacados</span></button>
+    <div class="directo-precios" id="directo-precios">
+      <img class="directo-plato" src="/img/platos-cut/plato-3.webp" alt="Spaghetti a la Boloñesa Clásica" width="720" height="720" loading="lazy">
+      <div class="precio precio--directo"><small>Directo</small><strong data-cuenta="129">$129</strong></div>
+      <div class="precio precio--app"><small>En la app</small><strong>$180</strong><svg viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 C30 4 70 18 98 6"/></svg></div>
+      <div class="ahorro"><span>Ahorras</span><strong data-cuenta="51">$51</strong></div>
     </div>
   </div>
 </section>
-<section class="seccion resenas" id="resenas">
-  <div class="contenedor">
-    <p class="kicker revela">Reseñas</p>
-    <h2 class="titulo-seccion revela">Lo que dicen en Google y Uber Eats</h2>
-    <p class="sub revela">Estas son las calificaciones reales del restaurante. Las reseñas completas están en Google Maps y en Uber Eats.</p>
-    <div class="resenas-grid">
-      <article class="resena revela"><p class="resena-estrellas" aria-label="4.8 de 5 estrellas en Google">★★★★★</p><p class="dato-num">4.8</p><p>Calificación en Google, con más de 90 reseñas.</p><footer><a href="https://www.google.com/maps/search/?api=1&query=Italian+Casa+Pasta+San+Miguel+de+Allende">Leer las reseñas en Google Maps</a></footer></article>
-      <article class="resena revela"><p class="resena-estrellas" aria-label="4.5 de 5 estrellas en Uber Eats">★★★★★</p><p class="dato-num">4.5</p><p>Calificación en Uber Eats.</p><footer><a href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg">Ver el restaurante en Uber Eats</a></footer></article>
-      <article class="resena revela"><p class="resena-estrellas" aria-label="Atención de Fernando">♥</p><p>“Yo mismo te voy a atender.”</p><p>Fernando cocina y atiende en persona, en el local.</p><footer>Fernando López</footer></article>
+
+<!-- ============ CONÓCENOS ============ -->
+<section class="conocenos" id="conocenos" data-seccion="Conócenos">
+  <div class="conocenos-grid">
+    <div class="conocenos-fotos">
+      <figure class="arco"><img data-parallax src="/img/cocina-1000.webp" alt="La cocina de Italian Casa Pasta con la pasta del día" width="1000" height="1333" loading="lazy"></figure>
+      <figure class="circulo"><img src="/img/pedidos-600.webp" alt="Pedidos para llevar listos" width="600" height="800" loading="lazy"></figure>
+      <span class="conocenos-firma" aria-hidden="true">Fer</span>
+    </div>
+    <div class="conocenos-texto">
+      <p class="kicker" data-anim="aparece">Conócenos</p>
+      <h2 class="titulo" data-split>Hecho a mano <em>por Fernando</em></h2>
+      <p class="lead" data-anim="sube">Italian Casa Pasta es la cocina de Fernando López. Él cocina, él atiende y él construyó el local con sus manos.</p>
+      <ol class="capitulos">
+        <li data-anim="sube"><span class="cap-n">I</span><div><h3>De Ciudad Victoria a San Miguel</h3><p>Fernando tiene 18 años. Es de Ciudad Victoria, Tamaulipas, y hoy vive en San Miguel de Allende, donde abrió su cocina.</p></div></li>
+        <li data-anim="sube"><span class="cap-n">II</span><div><h3>Un local hecho con sus manos</h3><p>Lo construyó él mismo y pintó las paredes de rojo, verde y amarillo. Cada rincón lo hizo pensando en que te sientas en casa.</p></div></li>
+        <li data-anim="sube"><span class="cap-n">III</span><div><h3>Fresco, todos los días</h3><p>Nada de atajos: la pasta, las salsas y cada plato se preparan a diario. Si pides por WhatsApp, te contesta él.</p></div></li>
+      </ol>
+      <blockquote class="cita" data-anim="sube">
+        <p>“Todo recién hecho como en casa. <em>Yo mismo te voy a atender.</em>”</p>
+        <footer><span class="firma">Fernando López</span> Dueño y cocinero</footer>
+      </blockquote>
+    </div>
+  </div>
+  <div class="cifras">
+    <div class="cifra" data-anim="sube"><strong><span data-cuenta="4.8" data-dec="1">4.8</span> ★</strong><small>en Google, más de 90 reseñas</small></div>
+    <div class="cifra" data-anim="sube"><strong><span data-cuenta="4.5" data-dec="1">4.5</span> ★</strong><small>en Uber Eats</small></div>
+    <div class="cifra" data-anim="sube"><strong><span data-cuenta="521">521</span> mil</strong><small>personas siguen la cocina de Fer en redes</small></div>
+    <div class="cifra" data-anim="sube"><strong><span data-cuenta="100">100</span>%</strong><small>fresco, preparado a diario</small></div>
+  </div>
+</section>
+
+<!-- ============ GALERÍA ============ -->
+<section class="galeria" id="galeria" data-seccion="Galería">
+  <div class="galeria-cab">
+    <p class="kicker" data-anim="aparece">Un vistazo al local</p>
+    <h2 class="titulo" data-split>La casa, <em>por dentro</em></h2>
+  </div>
+  <div class="galeria-grid">
+    <button class="gal gal--a" type="button" data-visor="platos" data-cursor="Ver"><img src="/img/platos-1000.webp" alt="Nuestros platos servidos: boloñesa, pomodoro con verduras y pan de ajo" width="1000" height="1333" loading="lazy"><span>Nuestros platos</span></button>
+    <button class="gal gal--b" type="button" data-visor="cocina" data-cursor="Ver"><img src="/img/cocina-1000.webp" alt="La cocina con la pasta del día" width="1000" height="1333" loading="lazy"><span>La cocina</span></button>
+    <button class="gal gal--c" type="button" data-visor="plato-5" data-cursor="Ver"><img src="/img/platos-cut/plato-5.webp" alt="Fettuccine al pesto con vegetales" width="720" height="720" loading="lazy"><span>Fettuccine al Pesto</span></button>
+    <button class="gal gal--d" type="button" data-visor="pedidos" data-cursor="Ver"><img src="/img/pedidos-1000.webp" alt="Pedidos para llevar empacados" width="1000" height="1333" loading="lazy"><span>Para llevar</span></button>
+    <button class="gal gal--e" type="button" data-visor="plato-4" data-cursor="Ver"><img src="/img/platos-cut/plato-4.webp" alt="Fusilli Alfredo con pollo" width="720" height="720" loading="lazy"><span>Fusilli Alfredo</span></button>
+  </div>
+</section>
+
+<!-- ============ RESEÑAS ============ -->
+<section class="resenas" id="resenas">
+  <div class="resenas-grid">
+    <a class="resena" data-anim="sube" href="https://www.google.com/maps/search/?api=1&query=Italian+Casa+Pasta+San+Miguel+de+Allende">
+      <span class="resena-logo" data-icon="google"></span>
+      <strong class="resena-num">4.8</strong>
+      <span class="estrellas" aria-label="4.8 de 5 estrellas"><i style="--v:.96"></i></span>
+      <span>Más de 90 reseñas en Google</span>
+      <span class="resena-link">Leer reseñas →</span>
+    </a>
+    <a class="resena" data-anim="sube" href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg">
+      <span class="resena-logo" data-icon="ubereats"></span>
+      <strong class="resena-num">4.5</strong>
+      <span class="estrellas" aria-label="4.5 de 5 estrellas"><i style="--v:.9"></i></span>
+      <span>Calificación en Uber Eats</span>
+      <span class="resena-link">Ver en Uber Eats →</span>
+    </a>
+    <div class="resena resena--cita" data-anim="sube">
+      <span class="resena-comillas" aria-hidden="true">“</span>
+      <p>Yo mismo te voy a atender.</p>
+      <span class="firma">Fernando López</span>
     </div>
   </div>
 </section>
-<section class="seccion ubicacion" id="ubicacion">
-  <div class="contenedor ubicacion-grid">
-    <div>
-      <p class="kicker revela">Ubicación</p>
-      <h2 class="titulo-seccion revela">Visítanos</h2>
-      <ul class="ubicacion-datos">
-        <li><span>📍</span><span><strong>Dirección</strong>5 de Mayo #2, cerca de Papelería y Más, 37700 San Miguel de Allende, Guanajuato.</span></li>
-        <li><span>🕐</span><span><strong>Horario</strong>Martes a domingo, 1:00 a 10:00 pm.</span></li>
-        <li><span>📱</span><span><strong>Pedidos</strong>WhatsApp 415 215 7489 · Envío $20 MXN · Tarjeta en el local.</span></li>
-      </ul>
-      <div class="hero-cta">
-        <a class="btn btn--vino" href="https://www.google.com/maps/search/?api=1&query=Italian+Casa+Pasta+San+Miguel+de+Allende">Cómo llegar en Maps</a>
-        <a class="btn btn--wa" href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20quiero%20pedir.">Pedir por WhatsApp</a>
+
+<!-- ============ VISÍTANOS ============ -->
+<section class="visitanos" id="visitanos" data-seccion="Visítanos">
+  <div class="visitanos-grid">
+    <div class="visitanos-info">
+      <p class="kicker" data-anim="aparece">Visítanos</p>
+      <h2 class="titulo" data-split>Te esperamos <em>en casa</em></h2>
+      <p class="estado estado--grande" data-estado data-anim="sube"><i class="estado-punto"></i><span class="estado-txt">Martes a domingo, 1:00 a 10:00 pm</span></p>
+      <dl class="datos-lista">
+        <div data-anim="sube"><dt>Dirección</dt><dd>5 de Mayo #2, cerca de Papelería y Más<br>37700 San Miguel de Allende, Guanajuato</dd></div>
+        <div data-anim="sube"><dt>Horario</dt><dd><ul class="horario" id="horario">
+          <li data-dia="1"><span>Lunes</span><span>Cerrado</span></li>
+          <li data-dia="2"><span>Martes</span><span>1:00 a 10:00 pm</span></li>
+          <li data-dia="3"><span>Miércoles</span><span>1:00 a 10:00 pm</span></li>
+          <li data-dia="4"><span>Jueves</span><span>1:00 a 10:00 pm <em>promo</em></span></li>
+          <li data-dia="5"><span>Viernes</span><span>1:00 a 10:00 pm</span></li>
+          <li data-dia="6"><span>Sábado</span><span>1:00 a 10:00 pm</span></li>
+          <li data-dia="0"><span>Domingo</span><span>1:00 a 10:00 pm</span></li>
+        </ul></dd></div>
+        <div data-anim="sube"><dt>Pedidos</dt><dd>WhatsApp <a href="tel:+524152157489">415 215 7489</a> · Envío $20 MXN · Tarjeta en el local<br><span class="promo">Martes y jueves hay promo en el local. <a href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20%C2%BFcu%C3%A1l%20es%20la%20promo%20de%20hoy%3F">Pregunta la de hoy</a>.</span></dd></div>
+      </dl>
+      <div class="hero-cta" data-anim="sube">
+        <a class="btn btn--vino" data-icon="googlemaps" href="https://www.google.com/maps/search/?api=1&query=Italian+Casa+Pasta+San+Miguel+de+Allende">Cómo llegar</a>
+        <a class="btn btn--wa" data-icon="whatsapp" href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20quiero%20pedir.">Pedir por WhatsApp</a>
       </div>
     </div>
-    <iframe class="mapa revela" title="Mapa: Italian Casa Pasta, 5 de Mayo #2, San Miguel de Allende" src="https://www.google.com/maps?q=Italian%20Casa%20Pasta%20San%20Miguel%20de%20Allende&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-  </div>
-</section>
-<section class="seccion faqs" id="faqs">
-  <div class="contenedor">
-    <p class="kicker revela">Preguntas frecuentes</p>
-    <h2 class="titulo-seccion revela">Dudas comunes</h2>
-    <details class="faq revela"><summary>¿Cuánto cuesta armar mi plato?</summary><p>La base es $79 e incluye tu pasta. Las salsas Pomodoro y Arrabbiata suman $15, y Alfredo y Pesto $40. Cada proteína o vegetal suma $50. La opción sin gluten suma $30.</p></details>
-    <details class="faq revela"><summary>¿Cómo pido?</summary><p>Arma tu plato aquí y pide por WhatsApp al 415 215 7489, o pídelo en Uber Eats. También puedes pasar al local, en 5 de Mayo #2.</p></details>
-    <details class="faq revela"><summary>¿Tienen envío a domicilio?</summary><p>Sí, el envío cuesta $20 MXN. También puedes recoger en el local.</p></details>
-    <details class="faq revela"><summary>¿Aceptan tarjeta?</summary><p>Sí, aceptamos tarjeta en el local.</p></details>
-    <details class="faq revela"><summary>¿Cuál es el horario?</summary><p>Martes a domingo, de 1:00 a 10:00 pm.</p></details>
-    <details class="faq revela"><summary>¿Tienen promociones?</summary><p>Sí, martes y jueves tenemos promociones en el local. Pregunta por la promo del día por WhatsApp.</p></details>
-  </div>
-</section>
-<section class="seccion redes" id="redes">
-  <div class="contenedor">
-    <p class="kicker revela">Síguenos</p>
-    <h2 class="titulo-seccion revela">Estamos en Instagram y TikTok</h2>
-    <div class="redes-grid">
-      <a class="red revela" href="https://www.instagram.com/italian_casapasta"><span class="red-icono" aria-hidden="true">IG</span><span><strong>@italian_casapasta</strong><small>Instagram del restaurante · 148,758 seguidores</small></span></a>
-      <a class="red revela" href="https://www.instagram.com/fernando_lopez2222"><span class="red-icono" aria-hidden="true">IG</span><span><strong>@fernando_lopez2222</strong><small>Instagram de Fernando · 272,879 seguidores</small></span></a>
-      <a class="red revela" href="https://www.tiktok.com/@fernando.milatido"><span class="red-icono" aria-hidden="true">TT</span><span><strong>@fernando.milatido</strong><small>TikTok de Fernando · 100,100 seguidores</small></span></a>
-      <a class="red revela" href="/tarjeta"><span class="red-icono" aria-hidden="true">▦</span><span><strong>Tarjeta digital de Fernando</strong><small>Guarda su contacto en tu teléfono</small></span></a>
+    <div class="visitanos-mapa" data-anim="revela">
+      <iframe title="Mapa: Italian Casa Pasta, 5 de Mayo #2, San Miguel de Allende" src="https://www.google.com/maps?q=Italian%20Casa%20Pasta%20San%20Miguel%20de%20Allende&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     </div>
   </div>
 </section>
+
+<!-- ============ PREGUNTAS ============ -->
+<section class="faqs" id="faqs">
+  <div class="faqs-in">
+    <div class="faqs-cab">
+      <p class="kicker" data-anim="aparece">Preguntas frecuentes</p>
+      <h2 class="titulo" data-split>Dudas <em>comunes</em></h2>
+      <p class="sub" data-anim="sube">¿Algo más? Escríbenos por WhatsApp y te contesta Fer.</p>
+    </div>
+    <div class="faqs-lista">
+      <details class="faq" data-anim="sube"><summary>¿Cuánto cuesta armar mi plato?<i aria-hidden="true"></i></summary><div class="faq-cuerpo"><p>La base es $79 e incluye tu pasta. Las salsas Pomodoro y Arrabbiata suman $15, y Alfredo y Pesto $40. Cada proteína o vegetal suma $50. La opción sin gluten suma $30.</p></div></details>
+      <details class="faq" data-anim="sube"><summary>¿Cómo pido?<i aria-hidden="true"></i></summary><div class="faq-cuerpo"><p>Arma tu plato aquí y pide por WhatsApp al 415 215 7489, o pídelo en Uber Eats. También puedes pasar al local, en 5 de Mayo #2.</p></div></details>
+      <details class="faq" data-anim="sube"><summary>¿Tienen envío a domicilio?<i aria-hidden="true"></i></summary><div class="faq-cuerpo"><p>Sí, el envío cuesta $20 MXN. También puedes recoger en el local.</p></div></details>
+      <details class="faq" data-anim="sube"><summary>¿Aceptan tarjeta?<i aria-hidden="true"></i></summary><div class="faq-cuerpo"><p>Sí, aceptamos tarjeta en el local.</p></div></details>
+      <details class="faq" data-anim="sube"><summary>¿Cuál es el horario?<i aria-hidden="true"></i></summary><div class="faq-cuerpo"><p>Martes a domingo, de 1:00 a 10:00 pm. Los lunes descansamos.</p></div></details>
+      <details class="faq" data-anim="sube"><summary>¿Tienen promociones?<i aria-hidden="true"></i></summary><div class="faq-cuerpo"><p>Sí, martes y jueves tenemos promociones en el local. Pregunta por la promo del día por WhatsApp.</p></div></details>
+      <details class="faq" data-anim="sube"><summary>¿Tienen opción sin gluten?<i aria-hidden="true"></i></summary><div class="faq-cuerpo"><p>Sí, tenemos pastas sin gluten por $30 adicionales. Puedes elegirla en el paso 3 de “Arma tu plato”.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REDES ============ -->
+<section class="redes" id="redes">
+  <div class="redes-cab">
+    <p class="kicker" data-anim="aparece">Síguenos</p>
+    <h2 class="titulo" data-split>La cocina, <em>en vivo</em></h2>
+  </div>
+  <div class="redes-grid" id="redes-grid">
+    <a class="red red--ig" data-anim="sube" href="https://www.instagram.com/italian_casapasta"><span class="red-logo" data-icon="instagram"></span><span class="red-quien">Instagram del restaurante</span><strong>@italian_casapasta</strong><span class="red-num"><b data-cuenta="148758">148,758</b> seguidores</span><span class="red-flecha" aria-hidden="true">↗</span></a>
+    <a class="red red--ig" data-anim="sube" href="https://www.instagram.com/fernando_lopez2222"><span class="red-logo" data-icon="instagram"></span><span class="red-quien">Instagram de Fernando</span><strong>@fernando_lopez2222</strong><span class="red-num"><b data-cuenta="272879">272,879</b> seguidores</span><span class="red-flecha" aria-hidden="true">↗</span></a>
+    <a class="red red--tt" data-anim="sube" href="https://www.tiktok.com/@fernando.milatido"><span class="red-logo" data-icon="tiktok"></span><span class="red-quien">TikTok de Fernando</span><strong>@fernando.milatido</strong><span class="red-num"><b data-cuenta="100100">100,100</b> seguidores</span><span class="red-flecha" aria-hidden="true">↗</span></a>
+    <a class="red red--card" data-anim="sube" href="/tarjeta"><span class="red-logo red-logo--img"><img src="/img/logo.webp" alt="" width="48" height="48" loading="lazy"></span><span class="red-quien">Tarjeta digital</span><strong>Guarda el contacto de Fer</strong><span class="red-num">WhatsApp, redes y ubicación</span><span class="red-flecha" aria-hidden="true">↗</span></a>
+  </div>
+</section>
+
 </main>
-<footer class="pie">
-  <div class="pie-in">
-    <div>
-      <picture><source srcset="/img/logo.webp" type="image/webp"><img class="pie-logo" src="/img/logo.png" alt="Italian Casa Pasta" loading="lazy" decoding="async" width="120" height="120"></picture>
-      <p>Desde el corazón de México. Pasta fresca, hecha a diario y servida como en casa.</p>
+
+<!-- ============ PIE ============ -->
+<footer class="pie" id="pie">
+  <div class="pie-arriba">
+    <div class="pie-cta">
+      <p class="kicker kicker--claro">¿Se te antojó?</p>
+      <p class="pie-grande">Tu plato te espera,<br><em>recién hecho.</em></p>
+      <div class="hero-cta">
+        <a class="btn btn--oro btn--grande" href="#arma" data-ir="Arma tu plato">Arma tu plato</a>
+        <a class="btn btn--wa btn--grande" data-icon="whatsapp" href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20quiero%20pedir.">WhatsApp</a>
+      </div>
     </div>
-    <div>
-      <h3>Visítanos</h3>
-      <p>5 de Mayo #2, cerca de Papelería y Más<br>37700 San Miguel de Allende, Guanajuato<br>Martes a domingo, 1:00 a 10:00 pm</p>
-    </div>
-    <div>
-      <h3>Pide</h3>
-      <p><a href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20quiero%20pedir.">WhatsApp 415 215 7489</a><br><a href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg">Uber Eats</a><br><a href="/tarjeta">Tarjeta digital</a></p>
+    <div class="pie-cols">
+      <div><h3>Visítanos</h3><p>5 de Mayo #2, cerca de Papelería y Más<br>37700 San Miguel de Allende, Gto.</p></div>
+      <div><h3>Horario</h3><p>Martes a domingo<br>1:00 a 10:00 pm</p></div>
+      <div><h3>Pide</h3><p><a href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20quiero%20pedir.">WhatsApp 415 215 7489</a><br><a href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg">Uber Eats</a><br><a href="/tarjeta">Tarjeta digital</a></p></div>
+      <div class="pie-redes">
+        <a href="https://www.instagram.com/italian_casapasta" data-icon="instagram" aria-label="Instagram del restaurante"></a>
+        <a href="https://www.tiktok.com/@fernando.milatido" data-icon="tiktok" aria-label="TikTok de Fernando"></a>
+        <a href="https://wa.me/524152157489" data-icon="whatsapp" aria-label="WhatsApp"></a>
+        <a href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg" data-icon="ubereats" aria-label="Uber Eats"></a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Italian+Casa+Pasta+San+Miguel+de+Allende" data-icon="googlemaps" aria-label="Google Maps"></a>
+      </div>
     </div>
   </div>
-  <p class="pie-firma">© <span id="anio">2026</span> Italian Casa Pasta · Hecho con cariño por <strong>BryanF Design</strong></p>
+  <p class="pie-marca" aria-hidden="true"><span>Casa</span> <em>Pasta</em></p>
+  <div class="pie-abajo">
+    <span>© <span id="anio">2026</span> Italian Casa Pasta · Desde el corazón de México</span>
+    <span>Hecho con cariño por <strong>BryanF Design</strong></span>
+  </div>
 </footer>
+
+<!-- ============ FLOTANTES ============ -->
+<a class="fab-wa" id="fab-wa" href="https://wa.me/524152157489?text=Hola%20Italian%20Casa%20Pasta%2C%20quiero%20pedir." aria-label="Pedir por WhatsApp" data-cursor="Pedir">
+  <span class="fab-wa-icono" data-icon="whatsapp"></span><span class="fab-wa-txt">¿Te ayudo con tu pedido?</span>
+</a>
+<button class="fab-plato" id="fab-plato" type="button" hidden>
+  <span class="fab-plato-mini"><img src="/img/logo.webp" alt="" width="32" height="32"></span>
+  <span><small>Tu plato</small><strong id="fab-total">$79</strong></span>
+  <span class="fab-plato-ir">Terminar →</span>
+</button>
+<button class="fab-arriba" id="fab-arriba" type="button" aria-label="Volver arriba">
+  <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="21" class="fab-arriba-fondo"/><circle cx="24" cy="24" r="21" class="fab-arriba-prog" id="fab-arriba-prog"/><path d="M24 31 V17 M18 23 L24 17 L30 23"/></svg>
+</button>
+
+<!-- ============ VISOR ============ -->
 <dialog class="visor" id="visor" aria-labelledby="visor-titulo">
-  <img id="visor-img" src="/img/platos-1000.jpg" alt="">
-  <div class="visor-bar"><span id="visor-titulo">Foto</span><form method="dialog"><button class="visor-cerrar" type="submit">Cerrar ✕</button></form></div>
+  <img id="visor-img" src="/img/platos-1000.webp" alt="">
+  <div class="visor-bar"><span id="visor-titulo">Foto</span><form method="dialog"><button class="visor-cerrar" type="submit">Cerrar ×</button></form></div>
 </dialog>
-<script type="module" src="/js/app.js"></script>
 </body>
 </html>

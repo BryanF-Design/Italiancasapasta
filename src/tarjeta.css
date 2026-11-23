@@ -1,0 +1,38 @@
+@import "@fontsource-variable/bodoni-moda/opsz.css";
+@import "@fontsource-variable/bodoni-moda/opsz-italic.css";
+@import "@fontsource-variable/manrope/index.css";
+@import "@fontsource/pinyon-script/400.css";
+
+:root { --crema: #F5EFE3; --marfil: #FBF8F1; --papel: #EDE3D0; --verde: #1E3A2B; --vino: #8C2A22; --oro: #B98A3E; --oro-2: #D8B66F; --tinta: #1B1A16; --tinta-2: #5B554A; --wa: #1FA855; --ease: cubic-bezier(.22,1,.36,1); }
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; min-height: 100svh; display: grid; place-items: center; padding: 2rem 1rem calc(2rem + env(safe-area-inset-bottom)); background: var(--verde); color: var(--tinta); font: 400 1rem/1.55 "Manrope Variable", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0; background: radial-gradient(ellipse at 50% 20%, #2C5240, transparent 65%); pointer-events: none; }
+img, svg { display: block; max-width: 100%; }
+h1, p { margin: 0; }
+.t { position: relative; width: min(100%, 430px); background: var(--crema); border-radius: 34px; overflow: hidden; text-align: center; box-shadow: 0 0 0 1px color-mix(in srgb, var(--oro) 60%, transparent), 0 50px 90px -40px #000; }
+.t-arriba { background: var(--vino); padding: 1.8rem 1.5rem 5rem; color: var(--crema); position: relative; }
+.t-arriba::after { content: ""; position: absolute; inset: .6rem; border: 1px solid color-mix(in srgb, var(--oro-2) 50%, transparent); border-radius: 26px 26px 0 0; border-bottom: 0; }
+.t-kicker { font: 700 .7rem/1 "Manrope Variable"; letter-spacing: .26em; text-transform: uppercase; color: var(--oro-2); }
+.t-script { font: 400 2rem/1.2 "Pinyon Script", cursive; margin-top: .4rem; }
+.t-logo { width: 156px; height: 156px; margin: -4.4rem auto 0; position: relative; border-radius: 50%; background: var(--crema); box-shadow: 0 0 0 6px var(--crema), 0 0 0 7px var(--oro); }
+.t-logo img { width: 100%; height: 100%; }
+.t-cuerpo { padding: 1.4rem 1.5rem 1.8rem; }
+h1 { font: 400 2.6rem/1 "Bodoni Moda Variable", serif; }
+h1 em { color: var(--vino); }
+.t-rol { font: 700 .72rem/1 "Manrope Variable"; letter-spacing: .22em; text-transform: uppercase; color: var(--oro); margin: .8rem 0 1rem; }
+.t-bio { color: var(--tinta-2); margin-bottom: 1rem; }
+.t-frase { font: italic 400 1.4rem/1.2 "Bodoni Moda Variable", serif; color: var(--vino); margin-bottom: 1.4rem; }
+.t-enlaces { display: grid; gap: .55rem; }
+.t-enlace { display: flex; align-items: center; gap: .9rem; min-height: 60px; padding: .6rem 1rem .6rem .6rem; border-radius: 18px; text-decoration: none; text-align: left; font-weight: 700; color: var(--tinta); background: var(--marfil); border: 1px solid color-mix(in srgb, var(--tinta) 10%, transparent); transition: transform .5s var(--ease), box-shadow .5s var(--ease); }
+.t-enlace:hover { transform: translateY(-3px); box-shadow: 0 14px 26px -16px rgba(0,0,0,.4); }
+.t-enlace small { display: block; font-weight: 500; font-size: .82rem; opacity: .75; }
+.t-enlace--vino { background: var(--vino); color: var(--crema); border: 0; }
+.t-enlace--wa { background: var(--wa); color: #fff; border: 0; }
+.t-ico { width: 44px; height: 44px; flex: none; display: grid; place-items: center; border-radius: 14px; background: var(--crema); color: var(--tinta); font-size: 1.2rem; }
+.t-ico .ico { width: 22px; height: 22px; }
+.t-enlace--vino .t-ico, .t-enlace--wa .t-ico { background: rgba(255,255,255,.16); color: #fff; }
+.t-ico--ig { color: #E1306C; }
+.t-ico--uber { color: #06C167; }
+.t-ico--maps { color: #4285F4; }
+.t-pie { font-size: .85rem; color: var(--tinta-2); margin-top: 1.4rem; }
+.t-pie a { color: var(--vino); font-weight: 700; text-decoration: none; }
