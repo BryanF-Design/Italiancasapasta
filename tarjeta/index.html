@@ -16,78 +16,62 @@
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&family=Yesteryear&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/estilos.css">
 <style>
-  body { background: var(--amarillo); min-height: 100svh; display: grid; place-items: center; padding: 2rem 1rem calc(2rem + env(safe-area-inset-bottom)); }
-  .tarjeta { width: min(100%, 420px); background: var(--crema); border-radius: 32px; overflow: hidden; box-shadow: 0 0 0 3px var(--dorado), 0 40px 80px -30px rgba(92, 21, 32, .55); text-align: center; }
-  .tarjeta__arriba { background: var(--vino); padding: 2rem 1.5rem 4.6rem; position: relative; }
-  .tarjeta__arriba::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: linear-gradient(90deg, var(--bandera-v) 0 33.3%, #fff 33.3% 66.6%, var(--bandera-r) 66.6%); }
-  .tarjeta__arriba p { font: 400 2rem/1 var(--f-script); color: var(--amarillo); margin: .4rem 0 0; }
-  .tarjeta__foto { width: 150px; height: 150px; margin: -4.2rem auto 0; position: relative; border-radius: 50%; background: var(--crema); box-shadow: 0 0 0 5px var(--crema), 0 0 0 7px var(--dorado); }
-  .tarjeta__foto img { width: 100%; height: 100%; object-fit: contain; }
-  .tarjeta__cuerpo { padding: 1.4rem 1.5rem 1.8rem; }
-  .tarjeta h1 { font-size: 2.3rem; font-weight: 900; color: var(--vino); }
-  .tarjeta__rol { font-weight: 700; color: var(--verde); margin: .4rem 0 .9rem; }
-  .tarjeta__bio { color: var(--tinta-2); font-size: 1rem; margin-bottom: 1.4rem; }
-  .tarjeta__frase { font: 400 1.9rem/1 var(--f-script); color: var(--vino); margin: 0 0 1.4rem; }
-  .enlaces { display: grid; gap: .6rem; }
-  .enlace { display: flex; align-items: center; gap: .9rem; min-height: 58px; padding: .7rem 1rem; border-radius: 16px; text-decoration: none; text-align: left; font-weight: 700; transition: transform .2s var(--suave), box-shadow .2s; }
-  .enlace:hover { transform: translateY(-3px); box-shadow: 0 12px 22px -12px rgba(0,0,0,.45); }
-  .enlace:active { transform: scale(.98); }
-  .tarjeta { animation: entra .9s var(--suave) both; }
-  .enlace { animation: entra .7s var(--suave) both; }
-  .enlace:nth-child(1){animation-delay:.25s}.enlace:nth-child(2){animation-delay:.32s}.enlace:nth-child(3){animation-delay:.39s}.enlace:nth-child(4){animation-delay:.46s}.enlace:nth-child(5){animation-delay:.53s}.enlace:nth-child(6){animation-delay:.6s}
-  .tarjeta__foto { animation: pre-logo 1s .1s var(--suave) both; }
-  .enlace svg { width: 26px; height: 26px; flex: none; }
-  .enlace small { display: block; font-weight: 500; font-size: .85rem; opacity: .85; }
-  .enlace--wa { background: var(--wa); color: #fff; }
-  .enlace--ig { background: var(--vino); color: var(--crema); }
-  .enlace--ig2 { background: var(--amarillo); color: var(--tinta); }
-  .enlace--tt { background: var(--verde); color: var(--crema); }
-  .enlace--uber { background: var(--tinta); color: var(--crema); }
-  .enlace--neutro { background: #fff; color: var(--vino); border: 2px solid var(--crema-2); }
-  .tarjeta__pie { margin-top: 1.4rem; font-size: .9rem; color: var(--tinta-2); }
-  .tarjeta__pie a { color: var(--vino); font-weight: 700; }
-  .credito-t { text-align: center; font-size: .82rem; color: var(--vino-osc); margin-top: 1.4rem; opacity: .8; }
-  .credito-t a { color: inherit; }
+@view-transition{navigation:auto}
+body{background:var(--amarillo);min-height:100svh;display:grid;place-items:center;padding:2rem 1rem calc(2rem + env(safe-area-inset-bottom))}
+.tarjeta{width:min(100%,420px);background:var(--crema);border-radius:32px;overflow:hidden;box-shadow:0 0 3px var(--dorado),0 40px 80px -30px color-mix(in oklch,var(--vino) 55%,transparent);text-align:center;content-visibility:auto}
+.tarjeta__arriba{background:var(--vino);padding:2rem 1.5rem 4.6rem;position:relative}
+.tarjeta__arriba::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--bandera-v) 0 33.3%,var(--papel) 33.3% 66.6%,var(--bandera-r) 66.6%)}
+.tarjeta__arriba p{font:400 2rem/1 var(--f-script);color:var(--amarillo);margin:.4rem 0 0}
+.tarjeta__foto{width:150px;height:150px;margin:-4.2rem auto 0;position:relative;border-radius:50%;background:var(--crema);box-shadow:0 0 0 5px var(--crema),0 0 0 7px var(--dorado)}
+.tarjeta__foto img{width:100%;height:100%;object-fit:contain}
+.tarjeta__cuerpo{padding:1.4rem 1.5rem 1.8rem}
+.tarjeta h1{font-size:2.3rem;font-weight:900;color:var(--vino)}
+.tarjeta__rol{font-weight:700;color:var(--verde);margin:.4rem 0 .9rem}
+.tarjeta__bio{color:var(--tinta-2);font-size:1rem;margin-bottom:1.4rem}
+.tarjeta__frase{font:400 1.9rem/1 var(--f-script);color:var(--vino);margin:0 0 1.4rem}
+.enlaces{display:grid;gap:.6rem}
+.enlace{display:flex;align-items:center;gap:.9rem;min-height:58px;padding:.7rem 1rem;border-radius:16px;text-decoration:none;text-align:left;font-weight:700;transition:transform .2s var(--suave),box-shadow .2s}
+.enlace:hover{transform:translateY(-3px);box-shadow:0 12px 22px -12px color-mix(in oklch,var(--tinta) 45%,transparent)}
+.enlace:active{transform:scale(.98)}
+.enlace small{display:block;font-weight:500;opacity:.85}
+.enlace--wa{background:var(--wa);color:#fff}
+.enlace--vino{background:var(--vino);color:var(--papel)}
+.enlace--verde{background:var(--verde);color:var(--papel)}
+.enlace--claro{background:var(--papel);color:var(--vino);border:2px solid color-mix(in oklch,var(--vino) 25%,transparent)}
+.enlace--dorado{background:var(--dorado);color:var(--tinta)}
+.tarjeta__pie{font-size:.85rem;color:var(--tinta-2);margin-top:1.2rem}
+.tarjeta__pie a{color:var(--vino);font-weight:700}
+@keyframes entra{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
+.tarjeta{animation:entra .9s var(--suave) both}
+.enlace{animation:entra .7s var(--suave) both}
+.enlace:nth-child(2){animation-delay:.06s}.enlace:nth-child(3){animation-delay:.12s}.enlace:nth-child(4){animation-delay:.18s}.enlace:nth-child(5){animation-delay:.24s}.enlace:nth-child(6){animation-delay:.3s}.enlace:nth-child(7){animation-delay:.36s}.enlace:nth-child(8){animation-delay:.42s}
+@media (prefers-reduced-motion:reduce){.tarjeta,.enlace{animation:none}}
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.6-.3Z"/></symbol>
-    <symbol id="i-ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M7 2.9h10A4.1 4.1 0 0 1 21.1 7v10a4.1 4.1 0 0 1-4.1 4.1H7A4.1 4.1 0 0 1 2.9 17V7A4.1 4.1 0 0 1 7 2.9Z"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></symbol>
-    <symbol id="i-tt" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2.1-2.8V9.1a6.3 6.3 0 1 0 5.5 6.3V8.6a7.9 7.9 0 0 0 4.6 1.5V6.7a4.6 4.6 0 0 1-4.6-4.7Z"/></symbol>
-    <symbol id="i-uber" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M5 8h14l-1 12H6L5 8Z"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M9 10V7a3 3 0 0 1 6 0v3"/></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></symbol>
-    <symbol id="i-user" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm0 2c-4.4 0-8 2.2-8 5v2h16v-2c0-2.8-3.6-5-8-5Z"/></symbol>
-  </defs>
-</svg>
-
-<main>
-  <article class="tarjeta">
-    <div class="tarjeta__arriba">
-      <p>Italian Casa Pasta</p>
+<main class="tarjeta">
+  <div class="tarjeta__arriba"><p>Desde el corazón de México</p></div>
+  <div class="tarjeta__foto">
+    <picture><source srcset="/img/logo.webp" type="image/webp"><img src="/img/logo.png" alt="Logo de Italian Casa Pasta" width="150" height="150"></picture>
+  </div>
+  <div class="tarjeta__cuerpo">
+    <h1>Fernando López</h1>
+    <p class="tarjeta__rol">Dueño y cocinero · Italian Casa Pasta</p>
+    <p class="tarjeta__bio">Pasta fresca, recién hecha como en casa, en San Miguel de Allende. Él cocina, atiende y construyó el local con sus manos.</p>
+    <p class="tarjeta__frase">“Yo mismo te voy a atender.”</p>
+    <div class="enlaces">
+      <a class="enlace enlace--vino" href="/fernando-lopez.vcf" download>▦<span>Guardar contacto<small>Fernando López · Italian Casa Pasta</small></span></a>
+      <a class="enlace enlace--wa" href="https://wa.me/524152157489?text=Hola%20Fernando%2C%20quiero%20pedir%20en%20Italian%20Casa%20Pasta.">✆<span>WhatsApp<small>415 215 7489 · Pide tu pasta</small></span></a>
+      <a class="enlace enlace--claro" href="tel:+524152157489">☎<span>Llamar<small>415 215 7489</small></span></a>
+      <a class="enlace enlace--verde" href="https://www.instagram.com/italian_casapasta">◎<span>Instagram del restaurante<small>@italian_casapasta</small></span></a>
+      <a class="enlace enlace--claro" href="https://www.instagram.com/fernando_lopez2222">◎<span>Instagram de Fernando<small>@fernando_lopez2222</small></span></a>
+      <a class="enlace enlace--claro" href="https://www.tiktok.com/@fernando.milatido">♪<span>TikTok de Fernando<small>@fernando.milatido</small></span></a>
+      <a class="enlace enlace--dorado" href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg">◉<span>Uber Eats<small>4.5 estrellas · Pide en la app</small></span></a>
+      <a class="enlace enlace--claro" href="https://www.google.com/maps/search/?api=1&query=Italian+Casa+Pasta+San+Miguel+de+Allende">⌖<span>Cómo llegar<small>5 de Mayo #2 · Martes a domingo, 1:00 a 10:00 pm</small></span></a>
     </div>
-    <!-- Cuando llegue la foto de Fer, reemplazar este logo por /img/fer.jpg -->
-    <div class="tarjeta__foto"><img src="/img/logo.webp" alt="Logo de Italian Casa Pasta" width="150" height="150"></div>
-    <div class="tarjeta__cuerpo">
-      <h1>Fernando López</h1>
-      <p class="tarjeta__rol">Dueño y cocinero de Italian Casa Pasta</p>
-      <p class="tarjeta__bio">Soy de Ciudad Victoria, Tamaulipas, y vivo en San Miguel de Allende. Levanté el local con mis manos y aquí cocino y atiendo todos los días que abrimos.</p>
-      <p class="tarjeta__frase">“Yo mismo te voy a atender”</p>
-
-      <nav class="enlaces" aria-label="Contacto y redes">
-        <a class="enlace enlace--wa" href="https://wa.me/524152157489?text=%C2%A1Hola%20Fer!" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp<small>415 215 7489, pedidos directos</small></span></a>
-        <a class="enlace enlace--ig" href="https://www.instagram.com/fernando_lopez2222" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg><span>Instagram de Fer<small>@fernando_lopez2222, 272 mil seguidores</small></span></a>
-        <a class="enlace enlace--tt" href="https://www.tiktok.com/@fernando.milatido" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-tt"/></svg><span>TikTok<small>@fernando.milatido</small></span></a>
-        <a class="enlace enlace--ig2" href="https://www.instagram.com/italian_casapasta" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg><span>Instagram del restaurante<small>@italian_casapasta</small></span></a>
-        <a class="enlace enlace--uber" href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-uber"/></svg><span>Uber Eats<small>Italian Casa Pasta</small></span></a>
-        <a class="enlace enlace--neutro" href="/fernando-lopez.vcf" download><svg aria-hidden="true"><use href="#i-user"/></svg><span>Guardar contacto<small>Se agrega a tu agenda</small></span></a>
-      </nav>
-
-      <p class="tarjeta__pie"><svg aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;color:var(--vino)"><use href="#i-pin"/></svg> 5 de Mayo #2, San Miguel de Allende<br><a href="/">Ver el sitio y el menú</a></p>
-    </div>
-  </article>
-  <p class="credito-t">Hecho con cariño por <a href="https://bryanfdesign.com" target="_blank" rel="noopener">BryanF Design</a></p>
+    <p class="tarjeta__pie">¿Ya conoces el sitio? <a href="/">italiancasapasta.vercel.app</a><br>© <span id="anio">2026</span> Italian Casa Pasta</p>
+  </div>
 </main>
+<script type="module">document.getElementById("anio").textContent = new Date().getFullYear();</script>
 </body>
 </html>
