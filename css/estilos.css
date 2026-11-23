@@ -279,3 +279,5 @@ button{font:inherit;cursor:pointer}
   .hero-media img{animation:none}
   ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none !important}
 }
+/* Ajuste v3.1: sombra de texto en el hero para que el titulo se lea sobre la foto, que trae texto claro. */
+.hero h1,.hero-sub,.hero-etiqueta{text-shadow:0 2px 20px color-mix(in oklch,var(--tinta) 85%,transparent),0 1px 4px color-mix(in oklch,var(--tinta) 75%,transparent)}
