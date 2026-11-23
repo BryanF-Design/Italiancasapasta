@@ -12,6 +12,8 @@ import { iniciarArmador } from "./configurator.js";
 import { iniciarAnimaciones, introHero, pintarFavoritos } from "./anim.js";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin);
+// En el teléfono, la barra del navegador cambia la altura al hacer scroll: no recalcular por eso.
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 const quieto = matchMedia("(prefers-reduced-motion: reduce)").matches;
 

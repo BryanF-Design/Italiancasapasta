@@ -138,7 +138,7 @@ export const iniciarNav = ({ lenis, quieto }) => {
     }
   };
   document.addEventListener("icp:plato", (e) => { tocado = e.detail.tocado; pintarFabPlato(); });
-  ScrollTrigger.create({ trigger: "#arma", start: "top 70%", end: "bottom 30%", onToggle: (st) => { enArma = st.isActive; pintarFabPlato(); } });
+  ScrollTrigger.create({ trigger: "#arma", start: "top 70%", end: "bottom 30%", onToggle: (st) => { enArma = st.isActive; document.body.classList.toggle("en-arma", enArma); pintarFabPlato(); } });
   fabPlato?.addEventListener("click", () => irA(".resumen", "Tu pedido"));
 
   /* ---------- Cursor ---------- */

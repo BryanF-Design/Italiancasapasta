@@ -140,7 +140,8 @@ export const iniciarAnimaciones = ({ quieto }) => {
 
   /* Manifiesto: las líneas entran desde fuera del lienzo y las pastillas se abren */
   $$(".m-linea").forEach((l, i) => {
-    gsap.fromTo(l, { xPercent: i % 2 ? 18 : -18, opacity: 0.1 }, {
+    const desliza = innerWidth < 641 ? 8 : 18;
+    gsap.fromTo(l, { xPercent: i % 2 ? desliza : -desliza, opacity: 0.1 }, {
       xPercent: 0, opacity: 1, ease: "none",
       scrollTrigger: { trigger: l, start: "top 100%", end: "top 55%", scrub: 1 },
     });
