@@ -51,7 +51,7 @@ export const correrPreloader = ({ quieto }) =>
     for (let i = 0; i < 14; i++) {
       const dx = (Math.random() - 0.5) * 160;
       const lim = Math.sqrt(1 - (dx / 108) ** 2) * 14;
-      burbujas.append(crear("circle", { cx: 200 + dx, cy: 190 + (Math.random() - 0.5) * lim * 2, r: 1.5 + Math.random() * 3.5, fill: "none", stroke: "#BFD9C8", "stroke-width": "1.2" }));
+      burbujas.append(crear("circle", { cx: 200 + dx, cy: 190 + (Math.random() - 0.5) * lim * 2, r: 1.5 + Math.random() * 3.5, fill: "#FFFDF6", "fill-opacity": ".75", stroke: "#9AA593", "stroke-width": ".9" }));
     }
     borde.after(burbujas);
 
@@ -81,7 +81,7 @@ export const correrPreloader = ({ quieto }) =>
 
     const hebras = $("#pre-hebras");
     const vapor = [...document.querySelectorAll("#pre-vapor path")];
-    const fuego = [...document.querySelectorAll("#pre-fuego path")].slice(0, 3);
+    const fuego = [...document.querySelectorAll("#pre-fuego .llama")];
 
     // ---- estado inicial ----
     gsap.set(["#pre-aereo", "#pre-aro-1", "#pre-aro-2"], { opacity: 0 });
@@ -103,7 +103,8 @@ export const correrPreloader = ({ quieto }) =>
 
     // bucles ambientales
     const bucles = [
-      gsap.to(fuego, { scaleY: 1.18, scaleX: 0.92, transformOrigin: "50% 100%", duration: 0.22, yoyo: true, repeat: -1, stagger: 0.07, ease: "sine.inOut" }),
+      gsap.to(fuego, { scaleY: () => 1.1 + Math.random() * 0.25, scaleX: 0.9, transformOrigin: "50% 100%", duration: () => 0.16 + Math.random() * 0.12, yoyo: true, repeat: -1, repeatRefresh: true, stagger: { each: 0.05, from: "random" }, ease: "sine.inOut" }),
+      gsap.to(".pre-calor", { opacity: 0.6, duration: 0.5, yoyo: true, repeat: -1, ease: "sine.inOut" }),
       gsap.fromTo(vapor, { drawSVG: "0% 0%", y: 10 }, { drawSVG: "0% 100%", y: -16, duration: 1.4, repeat: -1, stagger: 0.35, ease: "sine.inOut" }),
       gsap.to(vapor, { opacity: 0, duration: 1.4, repeat: -1, stagger: 0.35, ease: "power1.in" }),
       gsap.to(burbujas.children, {

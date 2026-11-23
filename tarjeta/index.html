@@ -4,39 +4,126 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fernando López · Italian Casa Pasta</title>
-<meta name="description" content="Tarjeta digital de Fernando López, dueño y cocinero de Italian Casa Pasta en San Miguel de Allende. WhatsApp, Instagram, TikTok y Uber Eats.">
-<meta name="theme-color" content="#1E3A2B">
+<meta name="description" content="Tarjeta digital de Fernando López, dueño y cocinero de Italian Casa Pasta en San Miguel de Allende. WhatsApp, Instagram, TikTok, Uber Eats y ubicación.">
+<meta name="theme-color" content="#F5EFE3">
+<link rel="canonical" href="https://italiancasapasta.vercel.app/tarjeta">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://italiancasapasta.vercel.app/tarjeta">
 <meta property="og:title" content="Fernando López · Italian Casa Pasta">
-<meta property="og:description" content="Pasta fresca, recién hecha como en casa, en San Miguel de Allende.">
+<meta property="og:description" content="Pasta fresca, hecha a mano y servida como en casa, en San Miguel de Allende.">
 <meta property="og:image" content="https://italiancasapasta.vercel.app/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/img/favicon.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preload" as="image" href="/img/logo.webp" fetchpriority="high">
+<script>document.documentElement.classList.add("js")</script>
 <script type="module" src="/src/tarjeta.js"></script>
 </head>
 <body class="t-body">
+<div class="t-fondo" aria-hidden="true"><span>Casa</span><em>Pasta</em></div>
+
 <main class="t">
-  <div class="t-arriba">
-    <p class="t-kicker">Italian Casa Pasta</p>
-    <p class="t-script">Desde el corazón de México</p>
-  </div>
-  <div class="t-logo"><img src="/img/logo.webp" alt="Logo de Italian Casa Pasta" width="160" height="160"></div>
-  <div class="t-cuerpo">
-    <h1>Fernando <em>López</em></h1>
-    <p class="t-rol">Dueño y cocinero</p>
-    <p class="t-bio">Pasta fresca, recién hecha como en casa, en San Miguel de Allende. Él cocina, atiende y construyó el local con sus manos.</p>
-    <p class="t-frase">“Yo mismo te voy a atender.”</p>
-    <div class="t-enlaces">
-      <a class="t-enlace t-enlace--vino" href="/fernando-lopez.vcf" download><span class="t-ico t-ico--txt" aria-hidden="true">＋</span><span>Guardar contacto<small>Fernando López · Italian Casa Pasta</small></span></a>
-      <a class="t-enlace t-enlace--wa" href="https://wa.me/524152157489?text=Hola%20Fernando%2C%20quiero%20pedir%20en%20Italian%20Casa%20Pasta."><span class="t-ico" data-icon="whatsapp"></span><span>WhatsApp<small>415 215 7489 · Pide tu pasta</small></span></a>
-      <a class="t-enlace" href="tel:+524152157489"><span class="t-ico t-ico--txt" aria-hidden="true">☎</span><span>Llamar<small>415 215 7489</small></span></a>
-      <a class="t-enlace" href="https://www.instagram.com/italian_casapasta"><span class="t-ico t-ico--ig" data-icon="instagram"></span><span>Instagram del restaurante<small>@italian_casapasta</small></span></a>
-      <a class="t-enlace" href="https://www.instagram.com/fernando_lopez2222"><span class="t-ico t-ico--ig" data-icon="instagram"></span><span>Instagram de Fernando<small>@fernando_lopez2222</small></span></a>
-      <a class="t-enlace" href="https://www.tiktok.com/@fernando.milatido"><span class="t-ico" data-icon="tiktok"></span><span>TikTok de Fernando<small>@fernando.milatido</small></span></a>
-      <a class="t-enlace" href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg"><span class="t-ico t-ico--uber" data-icon="ubereats"></span><span>Uber Eats<small>4.5 estrellas · Pide en la app</small></span></a>
-      <a class="t-enlace" href="https://www.google.com/maps/search/?api=1&query=Italian+Casa+Pasta+San+Miguel+de+Allende"><span class="t-ico t-ico--maps" data-icon="googlemaps"></span><span>Cómo llegar<small>5 de Mayo #2 · Martes a domingo, 1:00 a 10:00 pm</small></span></a>
+  <!-- Encabezado -->
+  <header class="t-cab">
+    <p class="t-kicker"><span>Italian Casa Pasta</span><i></i><span>San Miguel de Allende</span></p>
+    <div class="t-sello">
+      <svg class="t-sello-texto" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="t-circulo" d="M100 100 m-84 0 a84 84 0 1 1 168 0 a84 84 0 1 1 -168 0"/></defs>
+        <text><textPath href="#t-circulo">DUEÑO Y COCINERO · HECHO A MANO · DESDE EL CORAZÓN DE MÉXICO · </textPath></text>
+      </svg>
+      <span class="t-sello-aro" aria-hidden="true"></span>
+      <img class="t-logo" src="/img/logo.webp" alt="Logo de Italian Casa Pasta" width="512" height="512">
     </div>
-    <p class="t-pie"><a href="/">Ver el sitio y armar tu plato →</a><br>© <span id="anio">2026</span> Italian Casa Pasta</p>
-  </div>
+    <h1 class="t-nombre"><span class="t-linea"><span>Fernando</span></span> <span class="t-linea"><em>López</em></span></h1>
+    <p class="t-rol">Dueño y cocinero</p>
+    <p class="estado" data-estado><i class="estado-punto"></i><span class="estado-txt">Martes a domingo, 1:00 a 10:00 pm</span></p>
+  </header>
+
+  <!-- Acciones rápidas -->
+  <nav class="t-rapidos" aria-label="Contacto rápido">
+    <a class="t-rapido t-rapido--wa" href="https://wa.me/524152157489?text=Hola%20Fernando%2C%20quiero%20pedir%20en%20Italian%20Casa%20Pasta.">
+      <span class="t-rapido-ico" data-icon="whatsapp"></span><span>WhatsApp</span>
+    </a>
+    <a class="t-rapido" href="tel:+524152157489">
+      <span class="t-rapido-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.2l1.6 4-2 1.3a11 11 0 0 0 6.9 6.9l1.3-2 4 1.6V19a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span>Llamar</span>
+    </a>
+    <a class="t-rapido" href="/fernando-lopez.vcf" download>
+      <span class="t-rapido-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="8" r="3.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 20c.8-3.6 3.4-5.6 6.5-5.6 1.4 0 2.6.4 3.6 1.1M18 13v7M14.5 16.5h7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span>Guardar</span>
+    </a>
+  </nav>
+
+  <!-- Cita -->
+  <blockquote class="t-cita" data-sube>
+    <p>“Todo recién hecho como en casa. <em>Yo mismo te voy a atender.</em>”</p>
+    <footer><span class="t-firma">Fernando López</span><small>18 años · de Ciudad Victoria, Tamaulipas</small></footer>
+  </blockquote>
+
+  <!-- Pide -->
+  <section class="t-bloque" aria-labelledby="t-pide">
+    <h2 class="t-h2" id="t-pide" data-sube>Pide <em>tu plato</em></h2>
+    <a class="t-pedir" data-sube href="https://wa.me/524152157489?text=Hola%20Fernando%2C%20quiero%20pedir%20en%20Italian%20Casa%20Pasta.">
+      <span class="t-pedir-ico" data-icon="whatsapp"></span>
+      <span><strong>Pedir por WhatsApp</strong><small>415 215 7489 · te contesta Fer</small></span>
+      <span class="t-flecha" aria-hidden="true">→</span>
+    </a>
+    <div class="t-filas">
+      <a class="t-fila" data-sube href="/#arma">
+        <span class="t-fila-ico t-fila-ico--img"><img src="/img/platos-cut/plato-1.webp" alt="" width="720" height="720" loading="lazy"></span>
+        <span><strong>Arma tu plato</strong><small>Desde $79 · mira cómo se arma en vivo</small></span>
+        <span class="t-flecha" aria-hidden="true">→</span>
+      </a>
+      <a class="t-fila" data-sube href="https://www.ubereats.com/mx/store/italian-casa-pasta/0PF0kcfhX864SmxOWsKRDg">
+        <span class="t-fila-ico t-fila-ico--uber" data-icon="ubereats"></span>
+        <span><strong>Uber Eats</strong><small>4.5 ★ · pide desde la app</small></span>
+        <span class="t-flecha" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Favoritos -->
+  <section class="t-bloque" aria-labelledby="t-favs">
+    <div class="t-h2-fila" data-sube>
+      <h2 class="t-h2" id="t-favs">Lo que <em>más piden</em></h2>
+      <a class="t-mini-link" href="/#favoritos">Ver todos</a>
+    </div>
+    <div class="t-favs" id="t-favs-lista"></div>
+  </section>
+
+  <!-- Redes -->
+  <section class="t-bloque" aria-labelledby="t-redes">
+    <h2 class="t-h2" id="t-redes" data-sube>Síguenos <em>en redes</em></h2>
+    <div class="t-redes" id="t-redes-lista"></div>
+  </section>
+
+  <!-- Visítanos -->
+  <section class="t-bloque t-visita" aria-labelledby="t-visita" data-sube>
+    <h2 class="t-h2" id="t-visita">Visí<em>tanos</em></h2>
+    <p class="t-direccion"><strong>5 de Mayo #2</strong>, cerca de Papelería y Más<br>37700 San Miguel de Allende, Gto.</p>
+    <ol class="t-dias" aria-label="Días de servicio">
+      <li data-dia="1" class="t-dia--cerrado" title="Lunes, cerrado">L</li>
+      <li data-dia="2" title="Martes">M</li>
+      <li data-dia="3" title="Miércoles">M</li>
+      <li data-dia="4" title="Jueves">J</li>
+      <li data-dia="5" title="Viernes">V</li>
+      <li data-dia="6" title="Sábado">S</li>
+      <li data-dia="0" title="Domingo">D</li>
+    </ol>
+    <p class="t-horas">1:00 a 10:00 pm · Envío $20 · Tarjeta en el local<br><span>Martes y jueves hay promo en el local.</span></p>
+    <a class="t-boton" data-icon="googlemaps" href="https://www.google.com/maps/search/?api=1&query=Italian+Casa+Pasta+San+Miguel+de+Allende">Cómo llegar</a>
+  </section>
+
+  <!-- Pie -->
+  <footer class="t-pie">
+    <div class="t-pie-botones">
+      <button class="t-boton t-boton--linea" type="button" id="compartir">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3M7.5 7.5 12 3l4.5 4.5M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span id="compartir-txt">Compartir</span>
+      </button>
+      <a class="t-boton t-boton--vino" href="/">Ver el sitio</a>
+    </div>
+    <p class="t-marca"><span>Casa</span> <em>Pasta</em></p>
+    <p class="t-credito">© <span id="anio">2026</span> Italian Casa Pasta · Hecho con cariño por <strong>BryanF Design</strong></p>
+  </footer>
 </main>
 </body>
 </html>
